@@ -1,0 +1,58 @@
+{
+  "title": "Візуальний світ сайту YonkaAgency",
+  "question": "Бросок выпал на «Схему маршруту». Оставить, взять альтернативу или перебросить.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Схема маршруту",
+      "kicker": "THE ROLL",
+      "lineage": "транспортні схеми Бека, вказівники, ізотип, інженерна нотація",
+      "thesis": "Диаграмма рисует механизм: у агентства маршрут с шестью пересадками, у тебя — одна прямая линия.",
+      "palette": ["#2E1A47", "#7C3AED", "#F4F1EA", "#141218", "#C8B8DB"],
+      "materials": ["схематична лінія", "вузол-станція", "легенда", "друк на щільному папері"],
+      "viewport": "Одна фіолетова лінія через увесь перший екран: сім вузлів — сім днів від брифу до запуску. Поруч бліда сіра схема «як це в агенції» з шістьма пересадками. Ціна і телефон — на самій лінії, як позначки станцій.",
+      "risk": "Схема може стати декоративною інфографікою замість носія сенсу; на мобільному лінія має не розсипатись, а повертатись вертикально.",
+      "sketch": ".impeccable/sketches/assigned.webp"
+    },
+    {
+      "id": "challenger-swiss",
+      "label": "Swiss grid poster wall",
+      "lineage": "міжнародний типографічний стиль, концертні афіші",
+      "thesis": "Одна модульна сітка дисциплінує всі сторінки; сигнальний колір позначає активне.",
+      "case": "Фьюзиться добре: дисципліна сітки читається як інженерна акуратність. Але це і є передбачувана протилежність SaaS-руту — ризик приземлитись у категорійний дефолт мінімалізму.",
+      "sketch": ".impeccable/sketches/challenger-swiss.webp",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-swiss-grid-poster-wall-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/design-canon-swiss-grid-poster-wall.webp"
+    },
+    {
+      "id": "challenger-hypercard",
+      "label": "HyperCard stack",
+      "lineage": "HyperCard, чорно-білі картки, кнопки намальовані від руки",
+      "thesis": "Інструмент для читання є водночас інструментом для редагування.",
+      "case": "Несподівано влучає в обіцянку «адмінка, щоб ви редагували сайт самі». Але одноbitна чорно-біла палітра вбиває закріплений фіолетовий акцент і виглядає ретро-костюмом для стоматології у Львові.",
+      "sketch": ".impeccable/sketches/challenger-hypercard.webp",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-hypercard-stack-shoebox-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/medium-native-hypercard-stack-shoebox.webp"
+    },
+    {
+      "id": "challenger-drum",
+      "label": "Drum machine step row",
+      "lineage": "ритм-машина 80-х, ряд із шістнадцяти кроків",
+      "thesis": "Сім днів як кроки секвенсора: світло біжить по ряду і показує, де ти зараз.",
+      "case": "Крокова стрічка непогано лягає на процес за 7 днів. Але світ музичного приладу нічого не каже власнику СТО чи стоматології — резонанс з аудиторією слабкий.",
+      "sketch": ".impeccable/sketches/challenger-drum.webp",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-drum-machine-step-row-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-drum-machine-step-row.webp"
+    }
+  ],
+  "reroll": true,
+  "canon": true,
+  "canonCard": {
+    "label": "Категорійний стандарт",
+    "thesis": "Те, що зазвичай робить ця ніша: темне тло, фіолетовий градієнт, скляні картки, форма справа.",
+    "viewport": "Hero з великим заголовком і формою в картці праворуч, далі сітка однакових карток послуг, відгуки, CTA.",
+    "risk": "Виглядає як MyTeam і як будь-який SaaS-лендинг; анти-слоп бриф це прямо забороняє.",
+    "sketch": ".impeccable/sketches/canon.webp"
+  },
+  "steer": true
+}

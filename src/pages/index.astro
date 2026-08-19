@@ -1,0 +1,234 @@
+---
+import Base from '../layouts/Base.astro';
+import RouteCompare from '../components/RouteCompare.astro';
+
+const includes = [
+  ['Структура', 'Під ваші послуги, а не готовий шаблон'],
+  ['Дизайн', 'Індивідуальний, під ваш бізнес'],
+  ['Адаптив', 'Телефон, планшет, десктоп'],
+  ['SEO-налаштування', 'Title, description, мікророзмітка, sitemap, robots'],
+  ['Адмінка', 'Тексти й фото редагуєте самі'],
+  ['Підключення', 'Домен, хостинг, аналітика'],
+  ['Запуск', 'Перевірка на реальних пристроях'],
+];
+
+const tariffs = [
+  { name: 'Лендінг', price: '$200', term: 'до 5 днів', pages: 'одна сторінка' },
+  { name: 'Багатосторінковий сайт', price: '$300', term: 'до 7 днів', pages: '4–10 сторінок' },
+  { name: 'Редизайн наявного сайту', price: 'за запитом', term: '5–7 днів', pages: 'аудит + нова версія' },
+];
+
+const faq = [
+  ['Ви один. Що буде, якщо захворієте?', 'Строк зсунеться, і я попереджу заздалегідь. Натомість ви завжди знаєте, хто саме робить вашу роботу, і говорите з ним напряму.'],
+  ['Чи є підтримка після запуску?', 'Ні. Замість неї ви отримуєте адмінку, щоб редагувати тексти й фото самостійно. Окремі доопрацювання — за домовленістю.'],
+  ['А якщо дизайн не сподобається?', 'Напрямок узгоджуємо на 2–3 день, до написання коду. Переробити макет дешевше, ніж готовий сайт.'],
+  ['Чи робите інтернет-магазини?', 'Ні. Роблю лендінги, багатосторінкові сайти та редизайн.'],
+];
+---
+
+<Base
+  title="Сайт під ключ за 7 днів — YonkaAgency, Львів"
+  description="Роблю сайти сам: структура, дизайн, код, SEO. Говорите напряму з виконавцем, без націнки агенції. Сума в договорі не змінюється. Від $200."
+  path="/"
+>
+
+  <!-- Перший екран -->
+  <section class="mx-auto max-w-[80rem] px-5 sm:px-8 pt-12 sm:pt-20">
+    <h1 class="max-w-[16ch] text-[clamp(2.6rem,7.5vw,5.2rem)] font-semibold leading-[0.95] tracking-[-0.04em]">
+      Сайт під ключ<br />за <span class="text-route">7 днів</span>
+    </h1>
+    <p class="mt-6 max-w-[54ch] text-[1.0625rem] sm:text-[1.1875rem] leading-[1.5] text-ink-soft">
+      Роблю сам — від структури до запуску. Ви говорите напряму з тим, хто робить:
+      без менеджерів-посередників і без націнки на офіс.
+      <span class="text-ink">Сума фіксується в договорі.</span>
+    </p>
+
+    <RouteCompare />
+
+    <!-- Легенда маршруту: ціна і дія як позначки, не як картка -->
+    <div id="tsiny" class="mt-10 border-t-2 border-route pt-5 scroll-mt-6">
+      <p class="notation">Легенда · ціни</p>
+      <dl class="mt-5 space-y-4">
+        {tariffs.map((t) => (
+          <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <span class="h-[11px] w-[11px] shrink-0 translate-y-[-2px] rounded-full border-[3px] border-route bg-paper" aria-hidden="true"></span>
+            <dt class="text-[1.0625rem] font-medium">{t.name}</dt>
+            <dd class="notation">{t.pages} · {t.term}</dd>
+            <dd class="text-[1.1875rem] font-semibold text-route">{t.price}</dd>
+          </div>
+        ))}
+      </dl>
+      <p class="mt-5 max-w-[58ch] text-[0.9375rem] text-ink-soft">
+        Домен і хостинг оплачуєте ви — я налаштовую. Ціна фіксується в договорі до початку роботи.
+        Додатково: більше сторінок, розширене SEO-налаштування, перенос контенту зі старого сайту.
+      </p>
+
+      <div class="mt-7 flex flex-wrap items-center gap-x-4 gap-y-3">
+        <a href="https://t.me/YonkaAgency"
+           class="inline-flex min-h-[52px] items-center gap-3 rounded-[3px] bg-route px-6 text-[1.0625rem] font-medium text-paper transition-colors hover:bg-route-bright">
+          <span class="h-[11px] w-[11px] rounded-full bg-paper" aria-hidden="true"></span>
+          Кінцева станція — написати в Telegram
+        </a>
+        <a href="tel:+380962192952"
+           class="inline-flex min-h-[52px] items-center text-[1.0625rem] font-medium underline decoration-route decoration-2 underline-offset-[6px] hover:text-route">
+          +380 96 219 29 52
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Головний смисл: ціна, намальована передачами -->
+  <section id="chomu" class="mt-20 sm:mt-28 bg-route-deep text-paper">
+    <div class="mx-auto max-w-[80rem] px-5 sm:px-8 py-16 sm:py-24">
+      <h2 class="max-w-[20ch] text-[clamp(1.9rem,4.2vw,3.4rem)] font-semibold leading-[1.02] tracking-[-0.035em]">
+        Чому це коштує $200, а не $2000
+      </h2>
+
+      <div class="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-20">
+        <!-- Провідна причина, намальована схемою передач -->
+        <div>
+          <h3 class="text-[clamp(1.4rem,2.6vw,2rem)] font-medium leading-[1.15]">
+            Немає втрат на передачі
+          </h3>
+          <p class="mt-4 max-w-[46ch] leading-[1.55] text-route-pale">
+            В агенції завдання проходить через чотирьох людей, і кожна передача — це
+            перепитування, очікування й переробка. Тут його не передають нікому.
+          </p>
+
+          <ul class="mt-9 space-y-0" aria-label="Ланцюг передач в агенції">
+            {['менеджер', 'дизайнер', 'верстальник', 'SEO-спеціаліст'].map((role, i) => (
+              <li class="relative flex items-center gap-4 py-2 pl-8">
+                {i < 3 && <span class="absolute left-[9px] top-[26px] h-[22px] border-l-2 border-dashed border-route-pale/45" aria-hidden="true"></span>}
+                <span class="absolute left-0 h-[19px] w-[19px] rounded-full border-2 border-route-pale/60" aria-hidden="true"></span>
+                <span class="text-[1.0625rem] text-route-pale line-through decoration-route-bright decoration-2">{role}</span>
+                <span class="notation !text-route-pale/70">— зарплата в кошторисі</span>
+              </li>
+            ))}
+          </ul>
+
+          <p class="mt-8 flex items-center gap-4 text-[1.0625rem] font-medium">
+            <span class="h-[19px] w-[19px] shrink-0 rounded-full bg-route-bright" aria-hidden="true"></span>
+            Один виконавець — одна зарплата
+          </p>
+        </div>
+
+        <!-- Побічні причини — на полях -->
+        <div class="space-y-9 lg:pt-4">
+          {[
+            ['Немає агенції', 'Ви не оплачуєте чотири зарплати за одну роботу.'],
+            ['Немає офісу', 'Оренда, техніка й адміністрація не закладені в ціну.'],
+            ['Ви платите за роботу', 'Етапи ті самі, що в агенції: семантика, структура, дизайн, код, SEO-налаштування, запуск.'],
+          ].map(([t, b]) => (
+            <div class="border-t border-route-pale/25 pt-4">
+              <h3 class="text-[1.1875rem] font-medium">{t}</h3>
+              <p class="mt-2 max-w-[40ch] text-[0.9375rem] leading-[1.55] text-route-pale">{b}</p>
+            </div>
+          ))}
+          <p class="border-t border-route-pale/25 pt-4 max-w-[40ch] text-[0.9375rem] text-route-pale">
+            Ринкова ціна лендінга в Україні — від 10 000 грн. Різниця не в обсязі роботи,
+            а в тому, скільки людей стоїть між вами і виконавцем.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Що входить: зупинки на вертикальній лінії -->
+  <section id="vhodyt" class="mx-auto max-w-[80rem] px-5 sm:px-8 mt-20 sm:mt-28">
+    <div class="grid gap-10 lg:grid-cols-[20rem_minmax(0,1fr)] lg:gap-24">
+      <div class="lg:sticky lg:top-10 lg:self-start">
+        <h2 class="text-[clamp(1.9rem,3.6vw,2.9rem)] font-semibold leading-[1.03] tracking-[-0.035em]">
+          Що входить у сайт
+        </h2>
+        <p class="mt-5 max-w-[34ch] text-ink-soft">
+          Сім зупинок. Той самий обсяг робіт, що в агенції — різниця лише в тому,
+          скільки людей його виконує.
+        </p>
+      </div>
+
+      <ol class="relative pl-9">
+        <span class="absolute left-[7px] top-4 bottom-4 w-[3px] rounded-full bg-route/25" aria-hidden="true"></span>
+        {includes.map(([name, note], i) => (
+          <li class="relative py-4">
+            <span class="absolute -left-9 top-[22px] h-[17px] w-[17px] rounded-full border-[3px] border-route bg-paper" aria-hidden="true"></span>
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+              <span class="notation">{String(i + 1).padStart(2, '0')}</span>
+              <h3 class="text-[1.125rem] font-medium sm:text-[1.25rem]">{name}</h3>
+            </div>
+            <p class="mt-1 text-[0.9375rem] text-ink-soft">{note}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- Про мене -->
+  <section id="pro-mene" class="mx-auto max-w-[80rem] px-5 sm:px-8 mt-20 sm:mt-28">
+    <div class="sm:max-w-[38rem] lg:ml-[20rem] lg:max-w-[40rem]">
+      <div class="flex items-start gap-6">
+        <div class="h-20 w-20 shrink-0 rounded-full border-[3px] border-route bg-paper-deep sm:h-24 sm:w-24" role="img" aria-label="Фото Остапа Йонки — буде додано"></div>
+        <div>
+          <h2 class="text-[clamp(1.5rem,2.8vw,2.125rem)] font-semibold leading-[1.05] tracking-[-0.035em]">Остап Йонка</h2>
+          <p class="mt-3 max-w-[50ch] text-ink-soft">
+            Роблю сайти повного циклу: структура, дизайн, код, SEO-налаштування.
+            Працюю сам — тому спілкуєтесь напряму зі мною, а не з менеджером.
+            Львів, працюю по всій Західній Україні.
+          </p>
+          <p class="mt-3 max-w-[50ch] text-[0.9375rem] text-ink-soft">
+            Роблю концепції редизайну наявних сайтів із замірами — що не так і як це виправити.
+          </p>
+          <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/roboty/`} class="mt-4 inline-flex min-h-[46px] items-center text-[1.0625rem] font-medium underline decoration-route decoration-2 underline-offset-[6px] hover:text-route">
+            Подивитись роботи
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mx-auto max-w-[80rem] px-5 sm:px-8 mt-20 sm:mt-28">
+    <div class="sm:max-w-[34rem] lg:ml-[20rem] lg:max-w-[40rem]">
+      <h2 class="text-[clamp(1.6rem,3vw,2.25rem)] font-semibold leading-[1.05] tracking-[-0.035em]">
+        Незручні питання
+      </h2>
+
+      <div class="mt-8 border-t border-ink/15">
+        {faq.map(([q, a]) => (
+          <details class="group border-b border-ink/15">
+            <summary class="flex min-h-[56px] cursor-pointer list-none items-center justify-between gap-6 py-4 text-[1.0625rem] font-medium marker:hidden">
+              {q}
+              <span class="shrink-0 text-route transition-transform group-open:rotate-45" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 3.5v11M3.5 9h11"/></svg>
+              </span>
+            </summary>
+            <p class="pb-5 pr-10 text-[0.9375rem] leading-[1.6] text-ink-soft">{a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Кінцева дія -->
+  <section class="mx-auto max-w-[80rem] px-5 sm:px-8 mt-20 sm:mt-28">
+    <div class="border-t-[3px] border-route pt-9">
+      <h2 class="max-w-[18ch] text-[clamp(1.9rem,4vw,3rem)] font-semibold leading-[1.02] tracking-[-0.035em]">
+        Напишіть — відповім і скажу строк
+      </h2>
+      <p class="mt-5 max-w-[50ch] text-ink-soft">
+        Розкажіть у двох реченнях, що за бізнес і що потрібно. Відповім, скільки це коштує
+        і скільки займе — без брифів на 15 полів.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="https://t.me/YonkaAgency"
+           class="inline-flex min-h-[52px] items-center rounded-[3px] bg-route px-6 text-[1.0625rem] font-medium text-paper transition-colors hover:bg-route-bright">
+          Написати в Telegram
+        </a>
+        <a href="tel:+380962192952"
+           class="inline-flex min-h-[52px] items-center rounded-[3px] border border-ink/25 px-6 text-[1.0625rem] font-medium transition-colors hover:border-ink hover:bg-paper-deep">
+          +380 96 219 29 52
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Base>

@@ -1,0 +1,1982 @@
+﻿
+
+<!doctype html>
+<html lang="uk">
+<head>
+    <!-- Required meta tags -->
+	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/ico" href="https://brainlab.com.ua/wp-content/themes/brainlab/images/favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    
+    
+    
+
+			    <!-- PVC Template -->
+    <script type="text/template" id="pvc-stats-view-template">
+    <i class="pvc-stats-icon medium" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 502 315" preserveAspectRatio="xMidYMid meet"><g transform="translate(0,332) scale(0.1,-0.1)" fill="" stroke="none"><path d="M2394 3279 l-29 -30 -3 -207 c-2 -182 0 -211 15 -242 39 -76 157 -76 196 0 15 31 17 60 15 243 l-3 209 -33 29 c-26 23 -41 29 -80 29 -41 0 -53 -5 -78 -31z"/><path d="M3085 3251 c-45 -19 -58 -50 -96 -229 -47 -217 -49 -260 -13 -295 52 -53 146 -42 177 20 16 31 87 366 87 410 0 70 -86 122 -155 94z"/><path d="M1751 3234 c-13 -9 -29 -31 -37 -50 -12 -29 -10 -49 21 -204 19 -94 39 -189 45 -210 14 -50 54 -80 110 -80 34 0 48 6 76 34 21 21 34 44 34 59 0 14 -18 113 -40 219 -37 178 -43 195 -70 221 -36 32 -101 37 -139 11z"/><path d="M1163 3073 c-36 -7 -73 -59 -73 -102 0 -56 133 -378 171 -413 34 -32 83 -37 129 -13 70 36 67 87 -16 290 -86 209 -89 214 -129 231 -35 14 -42 15 -82 7z"/><path d="M3689 3066 c-15 -9 -33 -30 -42 -48 -48 -103 -147 -355 -147 -375 0 -98 131 -148 192 -74 13 15 57 108 97 206 80 196 84 226 37 273 -30 30 -99 39 -137 18z"/><path d="M583 2784 c-38 -19 -67 -74 -58 -113 9 -42 211 -354 242 -373 16 -10 45 -18 66 -18 51 0 107 52 107 100 0 39 -1 41 -124 234 -80 126 -108 162 -133 173 -41 17 -61 16 -100 -3z"/><path d="M4250 2784 c-14 -9 -74 -91 -133 -183 -95 -150 -107 -173 -107 -213 0 -55 33 -94 87 -104 67 -13 90 8 211 198 130 202 137 225 78 284 -27 27 -42 34 -72 34 -22 0 -50 -8 -64 -16z"/><path d="M2275 2693 c-553 -48 -1095 -270 -1585 -649 -135 -104 -459 -423 -483 -476 -23 -49 -22 -139 2 -186 73 -142 361 -457 571 -626 285 -228 642 -407 990 -497 242 -63 336 -73 660 -74 310 0 370 5 595 52 535 111 1045 392 1455 803 122 121 250 273 275 326 19 41 19 137 0 174 -41 79 -309 363 -465 492 -447 370 -946 591 -1479 653 -113 14 -422 18 -536 8z m395 -428 c171 -34 330 -124 456 -258 112 -119 167 -219 211 -378 27 -96 24 -300 -5 -401 -72 -255 -236 -447 -474 -557 -132 -62 -201 -76 -368 -76 -167 0 -236 14 -368 76 -213 98 -373 271 -451 485 -162 444 86 934 547 1084 153 49 292 57 452 25z m909 -232 c222 -123 408 -262 593 -441 76 -74 138 -139 138 -144 0 -16 -233 -242 -330 -319 -155 -123 -309 -223 -461 -299 l-81 -41 32 46 c18 26 49 83 70 128 143 306 141 649 -6 957 -25 52 -61 116 -79 142 l-34 47 45 -20 c26 -10 76 -36 113 -56z m-2057 25 c-40 -58 -105 -190 -130 -263 -110 -324 -59 -707 132 -981 25 -35 42 -64 37 -64 -19 0 -241 119 -326 174 -188 122 -406 314 -532 468 l-58 71 108 103 c185 178 428 349 672 473 66 33 121 60 123 61 2 0 -10 -19 -26 -42z"/><path d="M2375 1950 c-198 -44 -350 -190 -395 -379 -18 -76 -8 -221 19 -290 114 -284 457 -406 731 -260 98 52 188 154 231 260 27 69 37 214 19 290 -38 163 -166 304 -326 360 -67 23 -215 33 -279 19z"/></g></svg></i>
+	‎ <%= total_view %> ‎	<% if ( today_view > 0 ) { %>
+		<span class="views_today">,  <%= today_view %> просмотров сегодня</span>
+	<% } %>
+	</span>
+	</script>
+		    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="alternate" href="https://brainlab.com.ua/sozdanie-sajta-vo-lvove" hreflang="ru" />
+<link rel="alternate" href="https://brainlab.com.ua/uk/stvorennya-sajtu-u-lvovi" hreflang="uk" />
+
+	<!-- This site is optimized with the Yoast SEO plugin v28.1 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Розробка сайту Львів ᐉ створення сайтів під ключ у Львові | Ціни на Brainlab</title>
+	<meta name="description" content="Розробка сайтів від веб-студії «Brainlab» у Львові ✅ Високі вимоги до якості ⚡ Оперативність ➔ Прозорість роботи ⭐ Доступна вартість ☎️ +38 (073) 172-01-00" />
+	<link rel="canonical" href="https://brainlab.com.ua/uk/stvorennya-sajtu-u-lvovi" />
+	<meta property="og:locale" content="uk_UA" />
+	<meta property="og:locale:alternate" content="ru_RU" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Розробка сайту Львів ᐉ створення сайтів під ключ у Львові | Ціни на Brainlab" />
+	<meta property="og:description" content="Розробка сайтів від веб-студії «Brainlab» у Львові ✅ Високі вимоги до якості ⚡ Оперативність ➔ Прозорість роботи ⭐ Доступна вартість ☎️ +38 (073) 172-01-00" />
+	<meta property="og:url" content="https://brainlab.com.ua/uk/stvorennya-sajtu-u-lvovi" />
+	<meta property="og:site_name" content="brainlab" />
+	<meta property="article:modified_time" content="2026-06-18T16:10:00+00:00" />
+	<meta property="og:image" content="https://brainlab.com.ua/wp-content/themes/brainlab/images/logo1024x1024.jpg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Прибл. час читання" />
+	<meta name="twitter:data1" content="13 хвилин" />
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel="alternate" type="application/rss+xml" title="brainlab &raquo; стрічка" href="https://brainlab.com.ua/uk/feed" />
+<link rel="alternate" type="application/rss+xml" title="brainlab &raquo; Канал коментарів" href="https://brainlab.com.ua/uk/comments/feed" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://brainlab.com.ua/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbrainlab.com.ua%2Fuk%2Fstvorennya-sajtu-u-lvovi&#038;lang=uk" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://brainlab.com.ua/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbrainlab.com.ua%2Fuk%2Fstvorennya-sajtu-u-lvovi&#038;format=xml&#038;lang=uk" />
+
+<link data-optimized="2" rel="stylesheet" href="https://brainlab.com.ua/wp-content/litespeed/css/596eaf8fe736b639afc439a5fc9687c1.css?ver=1177b" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="a3-pvc-backbone-js-extra">
+var pvc_vars = {"rest_api_url":"https://brainlab.com.ua/wp-json/pvc/v1","ajax_url":"https://brainlab.com.ua/wp-admin/admin-ajax.php","security":"45c49bfd6a","ajax_load_type":"admin_ajax"};
+//# sourceURL=a3-pvc-backbone-js-extra
+</script>
+
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://brainlab.com.ua/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://brainlab.com.ua/?p=6452' />
+
+
+	        <script src="https://www.google.com/recaptcha/api.js?onload=onLoadRecaptcha&render=explicit" async
+                defer></script>
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+        </script>
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-NLW84VB');
+        </script>
+        <!-- End Google Tag Manager -->
+	
+    <!-- Facebook Pixel Code -->
+    <script defer>
+        setTimeout(function () {
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return;
+                n = f.fbq = function () {
+                    n.callMethod ?
+                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '440615559849002');
+            fbq('track', 'PageView');
+        }, 6000)
+    </script>
+
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=440615559849002&ev=PageView&noscript=1"
+        /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <script>
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        const currentLang = 'uk';
+        const modalLang = getCookie('modal_language');
+        const supportedLangs = ['uk', 'ru']; // Список підтримуваних мов
+
+        if (modalLang && modalLang !== currentLang && supportedLangs.includes(modalLang)) {
+            //location = '//';
+        }
+    </script>
+
+	
+
+
+</head>
+
+<body class="wp-singular page-template page-template-page-about page-template-page-about-php page page-id-6452 wp-theme-brainlab" >
+
+<!-- 	no-rus-language-popup -->
+<!-- no-rus-language-popup -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe class="no-lazy-iframe" src="https://www.googletagmanager.com/ns.html?id=GTM-NLW84VB"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <script type="application/ld+json">
+        {
+		  "@context": "http://schema.org",
+		  "@type": "BreadcrumbList",
+		  "itemListElement": [{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Веб студія",
+        "item": "https://brainlab.com.ua/uk/glavnaya"
+      }]
+    }
+
+
+    </script>
+
+<div id="page" class="site theme-default">
+	    <header class="light-theme light-theme--permanent">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-header">
+                    <div class="logo">
+                        <div class="logo-left">
+                            <a class="link-logo" href="https://brainlab.com.ua/uk/glavnaya">
+                                <img data-lazyloaded="1"
+                                     src="https://brainlab.com.ua/wp-content/themes/brainlab/images/logoblack.svg"
+                                     width="125" height="24"
+                                     data-src="https://brainlab.com.ua/wp-content/themes/brainlab/images/logoblack.svg"
+                                     alt="" class="def-logo">
+                                <noscript><img width="125" height="24"
+                                               src="https://brainlab.com.ua/wp-content/themes/brainlab/images/logoblack.svg"
+                                               alt="" class="def-logo"></noscript>
+                                <img data-lazyloaded="1"
+                                     src="https://brainlab.com.ua/wp-content/themes/brainlab/images/logowhite.svg"
+                                     width="125" height="24"
+                                     data-src="https://brainlab.com.ua/wp-content/themes/brainlab/images/logowhite.svg"
+                                     class="white-logo entered litespeed-loaded" data-ll-status="loaded">
+                                <noscript><img width="125" height="24"
+                                               src="https://brainlab.com.ua/wp-content/themes/brainlab/images/logowhite.svg"
+                                               class="white-logo"></noscript>
+                            </a>
+                            <div class="logo-subtitle">
+                                <img data-lazyloaded="1" src="/wp-content/themes/brainlab/img/ukraine.svg"
+                                     class="img-flag entered litespeed-loaded"
+                                     data-src="/wp-content/themes/brainlab/img/ukraine.svg" alt="ukraine flag"
+                                     data-ll-status="loaded">
+                                <noscript><img class="img-flag" src="/wp-content/themes/brainlab/img/ukraine.svg"
+                                               alt="ukraine flag"></noscript>
+                                <div class="subtitle-text">
+                                    We are working!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="logo-right">
+                            <!--                             <div class="lang-wrap js-lang-wrap">
+								                            </div> -->
+                        </div>
+                    </div>
+                    <div id="js-nav-wrapper" class="header__nav-box header-nav-box">
+                        <div class="header__contacts">
+                            <div class="header__contacts-item">
+                                <span class="header__contacts-heading">
+                                      Обговорити ваш проєкт                                </span>
+                                <a href="mailto:manager@brainlab.com.ua" class="header__contacts-link">
+                                    manager@brainlab.com.ua
+                                </a>
+                            </div>
+
+                            <div class="header__contacts-item">
+                                <span class="header__contacts-heading">
+                                     Інші питання (партнерство, вакансії...)                                </span>
+                                <a href="mailto:info@brainlab.com.ua"
+                                   class="header__contacts-link">info@brainlab.com.ua</a>
+                            </div>
+                        </div>
+                        <nav class="header__nav header-nav">
+							<div class="header-nav__link header-dropdown"><a href="https://brainlab.com.ua/uk/poslugi" class="header-dropdown__text">Послуги</a><svg class="header-dropdown__arrow" viewBox="0 0 6.7 4.1"><polygon points="3.4,4.1 0,0.7 0.7,0 3.4,2.6 6,0 6.7,0.7"></polygon></svg><svg class="icon header-dropdown__icon" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33257 1.69043L6.80957 1.69043L6.80957 12.1339L2.13178 7.45607L1.04393 8.54393L7.57107 15.0711L14.0982 8.54393L13.0104 7.45607L8.33257 12.1339V1.69043Z" fill="currentColor"/></svg><div class="header-dropdown__container"><button type="button" class="header-dropdown__back"><svg class="icon header-dropdown__back-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.825 17L17.425 22.6L16 24L8 16L16 8L17.425 9.4L11.825 15H24V17H11.825Z" fill="currentColor"></path></svg>Послуги</button><nav class="header-dropdown__grid"><div class="header-dropdown__col"><span class="header-dropdown__heading"><svg class="icon header-dropdown__heading-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="8" r="2" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00002 13.3332C10.9455 13.3332 13.3334 10.9454 13.3334 7.99984C13.3334 5.05432 10.9455 2.6665 8.00002 2.6665C5.0545 2.6665 2.66669 5.05432 2.66669 7.99984C2.66669 10.9454 5.0545 13.3332 8.00002 13.3332ZM8.00002 15.3332C12.0501 15.3332 15.3334 12.0499 15.3334 7.99984C15.3334 3.94975 12.0501 0.666504 8.00002 0.666504C3.94993 0.666504 0.666687 3.94975 0.666687 7.99984C0.666687 12.0499 3.94993 15.3332 8.00002 15.3332Z" fill="white"/>
+                            </svg>Web-сайти<svg class="icon header-dropdown__heading-arrow" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.175 17H8V15H20.175L14.575 9.4L16 8L24 16L16 24L14.575 22.6L20.175 17Z" fill="currentColor"></path></svg></span><div class="header-dropdown__list"><button type="button" class="header-dropdown__list-back"><svg class="icon header-dropdown__back-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.825 17L17.425 22.6L16 24L8 16L16 8L17.425 9.4L11.825 15H24V17H11.825Z" fill="currentColor"></path></svg>Web-сайти</button><div class="header-dropdown__list-content"><a href="https://brainlab.com.ua/uk/poslugi/landing-page" class="header-dropdown__link">Landing page</a><a href="https://brainlab.com.ua/uk/poslugi/korporativni-sajti" class="header-dropdown__link">Корпоративні сайти</a><a href="https://brainlab.com.ua/uk/poslugi/internet-magazin" class="header-dropdown__link">Інтернет магазин</a><a href="https://brainlab.com.ua/uk/poslugi/biznes-sajt" class="header-dropdown__link">Бізнес сайт</a><a href="https://brainlab.com.ua/uk/poslugi/sajt-vizitka" class="header-dropdown__link">Сайт візитка</a></div></div></div><div class="header-dropdown__col"><span class="header-dropdown__heading"><svg class="icon header-dropdown__heading-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="8" r="2" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00002 13.3332C10.9455 13.3332 13.3334 10.9454 13.3334 7.99984C13.3334 5.05432 10.9455 2.6665 8.00002 2.6665C5.0545 2.6665 2.66669 5.05432 2.66669 7.99984C2.66669 10.9454 5.0545 13.3332 8.00002 13.3332ZM8.00002 15.3332C12.0501 15.3332 15.3334 12.0499 15.3334 7.99984C15.3334 3.94975 12.0501 0.666504 8.00002 0.666504C3.94993 0.666504 0.666687 3.94975 0.666687 7.99984C0.666687 12.0499 3.94993 15.3332 8.00002 15.3332Z" fill="white"/>
+                            </svg>Діджиталізація<svg class="icon header-dropdown__heading-arrow" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.175 17H8V15H20.175L14.575 9.4L16 8L24 16L16 24L14.575 22.6L20.175 17Z" fill="currentColor"></path></svg></span><div class="header-dropdown__list"><button type="button" class="header-dropdown__list-back"><svg class="icon header-dropdown__back-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.825 17L17.425 22.6L16 24L8 16L16 8L17.425 9.4L11.825 15H24V17H11.825Z" fill="currentColor"></path></svg>Діджиталізація</button><div class="header-dropdown__list-content"><a href="https://brainlab.com.ua/uk/poslugi/ai-vydymist" class="header-dropdown__link">AI видимість</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-crm-sistem" class="header-dropdown__link">CRM система</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-sistemi-lms" class="header-dropdown__link">LMS система</a><a href="https://brainlab.com.ua/uk/poslugi/stvorennya-ta-rozrobka-erp-sistem" class="header-dropdown__link">ERP система</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-wms-sistemi" class="header-dropdown__link">WMS система</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-osobistogo-kabinetu" class="header-dropdown__link">Особистий кабінет</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-sistemi-tms" class="header-dropdown__link">TMS система</a></div></div></div><div class="header-dropdown__col"><span class="header-dropdown__heading"><svg class="icon header-dropdown__heading-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="8" r="2" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00002 13.3332C10.9455 13.3332 13.3334 10.9454 13.3334 7.99984C13.3334 5.05432 10.9455 2.6665 8.00002 2.6665C5.0545 2.6665 2.66669 5.05432 2.66669 7.99984C2.66669 10.9454 5.0545 13.3332 8.00002 13.3332ZM8.00002 15.3332C12.0501 15.3332 15.3334 12.0499 15.3334 7.99984C15.3334 3.94975 12.0501 0.666504 8.00002 0.666504C3.94993 0.666504 0.666687 3.94975 0.666687 7.99984C0.666687 12.0499 3.94993 15.3332 8.00002 15.3332Z" fill="white"/>
+                            </svg>Дизайн<svg class="icon header-dropdown__heading-arrow" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.175 17H8V15H20.175L14.575 9.4L16 8L24 16L16 24L14.575 22.6L20.175 17Z" fill="currentColor"></path></svg></span><div class="header-dropdown__list"><button type="button" class="header-dropdown__list-back"><svg class="icon header-dropdown__back-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.825 17L17.425 22.6L16 24L8 16L16 8L17.425 9.4L11.825 15H24V17H11.825Z" fill="currentColor"></path></svg>Дизайн</button><div class="header-dropdown__list-content"><a href="https://brainlab.com.ua/uk/poslugi/dizajn-sajtu" class="header-dropdown__link">Дизайн сайту</a><a href="https://brainlab.com.ua/uk/redizajn-sajtu" class="header-dropdown__link">Редизайн сайту</a></div></div></div><div class="header-dropdown__col"><span class="header-dropdown__heading"><svg class="icon header-dropdown__heading-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="8" r="2" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00002 13.3332C10.9455 13.3332 13.3334 10.9454 13.3334 7.99984C13.3334 5.05432 10.9455 2.6665 8.00002 2.6665C5.0545 2.6665 2.66669 5.05432 2.66669 7.99984C2.66669 10.9454 5.0545 13.3332 8.00002 13.3332ZM8.00002 15.3332C12.0501 15.3332 15.3334 12.0499 15.3334 7.99984C15.3334 3.94975 12.0501 0.666504 8.00002 0.666504C3.94993 0.666504 0.666687 3.94975 0.666687 7.99984C0.666687 12.0499 3.94993 15.3332 8.00002 15.3332Z" fill="white"/>
+                            </svg>Підтримка<svg class="icon header-dropdown__heading-arrow" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.175 17H8V15H20.175L14.575 9.4L16 8L24 16L16 24L14.575 22.6L20.175 17Z" fill="currentColor"></path></svg></span><div class="header-dropdown__list"><button type="button" class="header-dropdown__list-back"><svg class="icon header-dropdown__back-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.825 17L17.425 22.6L16 24L8 16L16 8L17.425 9.4L11.825 15H24V17H11.825Z" fill="currentColor"></path></svg>Підтримка</button><div class="header-dropdown__list-content"><a href="https://brainlab.com.ua/uk/support-ua" class="header-dropdown__link">Техпідтримка</a><a href="https://brainlab.com.ua/uk/doopraczyuvannya-sajtu" class="header-dropdown__link">Доопрацювання сайту</a></div></div></div><div class="header-dropdown__col"><span class="header-dropdown__heading"><svg class="icon header-dropdown__heading-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="8" r="2" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00002 13.3332C10.9455 13.3332 13.3334 10.9454 13.3334 7.99984C13.3334 5.05432 10.9455 2.6665 8.00002 2.6665C5.0545 2.6665 2.66669 5.05432 2.66669 7.99984C2.66669 10.9454 5.0545 13.3332 8.00002 13.3332ZM8.00002 15.3332C12.0501 15.3332 15.3334 12.0499 15.3334 7.99984C15.3334 3.94975 12.0501 0.666504 8.00002 0.666504C3.94993 0.666504 0.666687 3.94975 0.666687 7.99984C0.666687 12.0499 3.94993 15.3332 8.00002 15.3332Z" fill="white"/>
+                            </svg>IT- рішення<svg class="icon header-dropdown__heading-arrow" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.175 17H8V15H20.175L14.575 9.4L16 8L24 16L16 24L14.575 22.6L20.175 17Z" fill="currentColor"></path></svg></span><div class="header-dropdown__list"><button type="button" class="header-dropdown__list-back"><svg class="icon header-dropdown__back-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.825 17L17.425 22.6L16 24L8 16L16 8L17.425 9.4L11.825 15H24V17H11.825Z" fill="currentColor"></path></svg>IT- рішення</button><div class="header-dropdown__list-content"><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-saas-servisu" class="header-dropdown__link">SaaS-сервіси</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-sap-rishen" class="header-dropdown__link">SAP-рішення</a><a href="https://brainlab.com.ua/uk/poslugi/mvp-razrabotka" class="header-dropdown__link">MVP</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-programnogo-zabezpechennya" class="header-dropdown__link">Програмне забезпечення</a><a href="https://brainlab.com.ua/uk/poslugi/poslugi-kiberbezpeki" class="header-dropdown__link">Кібербезпека</a></div></div></div></nav></div><div class="header-dropdown__backdrop"></div></div><div class="header-nav__link header-dropdown"><span class="header-dropdown__text">Індустрії</span><svg class="header-dropdown__arrow" viewBox="0 0 6.7 4.1"><polygon points="3.4,4.1 0,0.7 0.7,0 3.4,2.6 6,0 6.7,0.7"></polygon></svg><svg class="icon header-dropdown__icon" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33257 1.69043L6.80957 1.69043L6.80957 12.1339L2.13178 7.45607L1.04393 8.54393L7.57107 15.0711L14.0982 8.54393L13.0104 7.45607L8.33257 12.1339V1.69043Z" fill="currentColor"/></svg><div class="header-dropdown__container header-dropdown__container-mobile"><button type="button" class="header-dropdown__back"><svg class="icon header-dropdown__back-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.825 17L17.425 22.6L16 24L8 16L16 8L17.425 9.4L11.825 15H24V17H11.825Z" fill="currentColor"></path></svg>Індустрії</button><nav class="header-dropdown__grid"><div class="header-dropdown__col"><div class="header-dropdown__list"><div class="header-dropdown__list-content"><a href="https://brainlab.com.ua/uk/rozrobka-ecommerce-proektiv" class="header-dropdown__link">Ecommerce проект</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-sajtu-neruhomosti" class="header-dropdown__link">Нерухомість</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-turistichnogo-sajtu" class="header-dropdown__link">Туризм</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-medichnogo-sajtu" class="header-dropdown__link">Медицина</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-sajtu-aukczionu" class="header-dropdown__link">Аукціон</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-derzhavnih-sajtiv" class="header-dropdown__link">Держава</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-doshki-ogoloshen" class="header-dropdown__link">Дошка оголошень</a></div></div></div><div class="header-dropdown__col"><div class="header-dropdown__list"><div class="header-dropdown__list-content"><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-internet-portalu" class="header-dropdown__link">Інтернет портал</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-korporativnogo-portalu" class="header-dropdown__link">Корпорація</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-marketplejsu" class="header-dropdown__link">Маркетплейс</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-b2b-portaliv" class="header-dropdown__link">B2B</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-finteh-sajtiv" class="header-dropdown__link">Фінтех</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-osvitnoi-platformi" class="header-dropdown__link">Освіта</a><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-sajtu-novin" class="header-dropdown__link">Новини</a></div></div></div></nav></div><div class="header-dropdown__backdrop"></div></div><div class="header-nav__link header-dropdown"><span class="header-dropdown__text">Технології</span><svg class="header-dropdown__arrow" viewBox="0 0 6.7 4.1"><polygon points="3.4,4.1 0,0.7 0.7,0 3.4,2.6 6,0 6.7,0.7"></polygon></svg><svg class="icon header-dropdown__icon" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33257 1.69043L6.80957 1.69043L6.80957 12.1339L2.13178 7.45607L1.04393 8.54393L7.57107 15.0711L14.0982 8.54393L13.0104 7.45607L8.33257 12.1339V1.69043Z" fill="currentColor"/></svg><div class="header-dropdown__container header-dropdown__container-mobile"><button type="button" class="header-dropdown__back"><svg class="icon header-dropdown__back-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.825 17L17.425 22.6L16 24L8 16L16 8L17.425 9.4L11.825 15H24V17H11.825Z" fill="currentColor"></path></svg>Технології</button><nav class="header-dropdown__grid"><div class="header-dropdown__col"><div class="header-dropdown__list"><div class="header-dropdown__list-content"><a href="https://brainlab.com.ua/uk/rozrobka-proyektiv-na-laravel" class="header-dropdown__link">Laravel</a><a href="https://brainlab.com.ua/uk/stvorennya-sajtu-na-wp" class="header-dropdown__link">Wordpress</a><a href="https://brainlab.com.ua/uk/stvorennya-sajtu-na-opencart" class="header-dropdown__link">Opencart</a></div></div></div></nav></div><div class="header-dropdown__backdrop"></div></div><div class="header-nav__link header-dropdown"><span class="header-dropdown__text">Про нас</span><svg class="header-dropdown__arrow" viewBox="0 0 6.7 4.1"><polygon points="3.4,4.1 0,0.7 0.7,0 3.4,2.6 6,0 6.7,0.7"></polygon></svg><svg class="icon header-dropdown__icon" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.33257 1.69043L6.80957 1.69043L6.80957 12.1339L2.13178 7.45607L1.04393 8.54393L7.57107 15.0711L14.0982 8.54393L13.0104 7.45607L8.33257 12.1339V1.69043Z" fill="currentColor"/></svg><div class="header-dropdown__container header-dropdown__container-mobile"><button type="button" class="header-dropdown__back"><svg class="icon header-dropdown__back-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.825 17L17.425 22.6L16 24L8 16L16 8L17.425 9.4L11.825 15H24V17H11.825Z" fill="currentColor"></path></svg>Про нас</button><nav class="header-dropdown__grid"><div class="header-dropdown__col"><div class="header-dropdown__list"><div class="header-dropdown__list-content"><a href="https://brainlab.com.ua/uk/o-studii" class="header-dropdown__link">Про компанію</a><a href="https://brainlab.com.ua/uk/vidguki" class="header-dropdown__link">Відгуки</a></div></div></div></nav></div><div class="header-dropdown__backdrop"></div></div><a href="https://brainlab.com.ua/uk/blog-uk" class="header-nav__link">Блог</a><a href="/uk/portfolio" class="header-nav__link">Портфоліо</a><a href="https://brainlab.com.ua/uk/kontakti" class="header-nav__link">Контакти</a>                        </nav>
+                    </div>
+                    <div class="mnu-btn">
+                        <a href="#" class="!cd-nav-trigger" data-toggle="modal"
+                           data-target="#main-modal-form-header_call_back">
+                            <div class="mnu-btn__text">
+								Зв'язатися з нами                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none">
+                                <path d="M19.23 15.2598L16.69 14.9698C16.3913 14.9347 16.0886 14.9678 15.8046 15.0665C15.5205 15.1652 15.2625 15.327 15.05 15.5398L13.21 17.3798C10.3712 15.936 8.06377 13.6286 6.61999 10.7898L8.47 8.93977C8.9 8.50977 9.10999 7.90977 9.03999 7.29977L8.74999 4.77977C8.6933 4.29194 8.45919 3.842 8.09223 3.51561C7.72527 3.18923 7.2511 3.00918 6.76 3.00977H5.03C3.9 3.00977 2.95999 3.94977 3.02999 5.07977C3.55999 13.6198 10.39 20.4398 18.92 20.9698C20.05 21.0398 20.99 20.0998 20.99 18.9698V17.2398C21 16.2298 20.24 15.3798 19.23 15.2598Z"
+                                      fill="black"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <button class="header__burger burger js-nav-button"
+                            type="button"
+                            aria-label="Open navigation">
+                        <span class="burger__line"></span>
+                        <span class="burger__line"></span>
+                        <span class="burger__line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="hidden-content section-menu header-contacts">
+        <div class="container">
+
+            <div class="w-logo">
+                <a class="w-logo-link" href="https://brainlab.com.ua/uk/glavnaya">
+                    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="https://brainlab.com.ua/wp-content/themes/brainlab/images/logowhite.svg" alt=""><noscript><img src="https://brainlab.com.ua/wp-content/themes/brainlab/images/logowhite.svg" alt=""></noscript>
+                </a>
+            </div>
+
+            <a href="javascript:void(0);" class="cd-nav-trigger btn-open-menu">
+                <div class="text-btn-menu text-close"></div>
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.4 24.5L0 22.1L9.6 12.5L0 2.9L2.4 0.5L12 10.1L21.6 0.5L24 2.9L14.4 12.5L24 22.1L21.6 24.5L12 14.9L2.4 24.5Z"
+                          fill="white"/>
+                </svg>
+            </a>
+        </div>
+        <div class="header-contacts__container">
+            <div class="header-contacts__content">
+                <div class="header-contacts__col">
+                    <div class="header-contacts__group">
+                        <span class="header-contacts__heading">
+                            Зв'язатися з нами                        </span>
+                        <div class="header-contacts__messenger-list">
+                            <a href="https://t.me/brain_lab" target="_blank" class="header-contacts__messenger-link">
+                                <svg class="header-contacts__messenger" width="139" height="32" viewBox="0 0 139 32"
+                                     fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M29.5363 1.00252C29.1029 1.02164 28.6991 1.14787 28.3437 1.29156C28.0107 1.4255 26.7385 1.97114 24.7346 2.83047C22.729 3.69055 20.0734 4.8307 17.2406 6.04892C11.5749 8.48536 5.20512 11.2279 1.94252 12.6316C1.81984 12.6844 1.39176 12.8211 0.937411 13.1758C0.48306 13.5306 0 14.2655 0 15.0845C0 15.7449 0.314727 16.401 0.71087 16.7927C1.10701 17.1844 1.52618 17.3779 1.88524 17.5244C3.188 18.056 7.22844 19.7094 7.99143 20.0216C8.25994 20.8441 9.7224 25.3178 10.0615 26.4142C10.2851 27.1377 10.4979 27.5909 10.775 27.9505C10.9136 28.1303 11.0746 28.2879 11.2698 28.4114C11.3478 28.4607 11.4333 28.4988 11.5197 28.5338L11.5249 28.5364C11.5449 28.5444 11.562 28.5579 11.5822 28.565C11.6203 28.5783 11.6458 28.5799 11.6968 28.5911C11.8999 28.6566 12.1049 28.6978 12.2879 28.6978C13.068 28.6978 13.5456 28.2682 13.5456 28.2682L13.5742 28.2473L17.5869 24.7763L22.4536 29.38C22.5221 29.4769 23.1612 30.3539 24.5706 30.3539C25.4074 30.3539 26.0713 29.934 26.4975 29.4868C26.9237 29.0396 27.1892 28.5698 27.3021 27.9791V27.9765C27.4077 27.4184 31.8928 4.39283 31.8928 4.39283L31.885 4.42407C32.0163 3.82478 32.0507 3.26666 31.9058 2.7159C31.761 2.16514 31.3792 1.63782 30.9059 1.35405C30.4327 1.07035 29.9696 0.983402 29.5363 1.00252ZM29.2863 3.78872C29.2799 3.82763 29.2911 3.80806 29.2811 3.85381L29.2785 3.86944L29.2759 3.88506C29.2759 3.88506 24.8463 26.6161 24.6826 27.4818C24.6945 27.4164 24.6398 27.5464 24.5836 27.625C24.5042 27.5703 24.3414 27.5 24.3414 27.5L24.3154 27.4714L17.6676 21.1829L12.9675 25.245L14.3658 19.6466C14.3658 19.6466 23.1066 10.5986 23.6332 10.072C24.0571 9.65068 24.1461 9.50382 24.1461 9.3585C24.1461 9.16385 24.0447 9.02259 23.8181 9.02259C23.6141 9.02259 23.3398 9.22091 23.1931 9.31423C21.2825 10.5322 12.8945 15.4208 9.13455 17.6077C8.53703 17.3632 4.3858 15.6639 2.97888 15.0897C2.98954 15.0851 2.98603 15.0867 2.99711 15.0819C6.26056 13.6779 12.6276 10.9353 18.2925 8.49921C21.125 7.28116 23.7826 6.14015 25.7866 5.28076C27.7597 4.43461 29.1307 3.85227 29.2863 3.78872Z"
+                                          fill="#23A0DD"/>
+                                    <path d="M49.48 7.2V8.784H44.32V24H42.64V8.784H37.48V7.2H49.48ZM55.0287 11.712C56.8047 11.712 58.2367 12.344 59.3247 13.608C60.4287 14.856 60.9807 16.336 60.9807 18.048C60.9807 18.224 60.9647 18.472 60.9327 18.792H50.3967C50.5567 20.008 51.0687 20.976 51.9327 21.696C52.8127 22.4 53.8927 22.752 55.1727 22.752C56.0847 22.752 56.8687 22.568 57.5247 22.2C58.1967 21.816 58.7007 21.32 59.0367 20.712L60.4287 21.528C59.9007 22.376 59.1807 23.048 58.2687 23.544C57.3567 24.04 56.3167 24.288 55.1487 24.288C53.2607 24.288 51.7247 23.696 50.5407 22.512C49.3567 21.328 48.7647 19.824 48.7647 18C48.7647 16.208 49.3487 14.712 50.5167 13.512C51.6847 12.312 53.1887 11.712 55.0287 11.712ZM55.0287 13.248C53.7807 13.248 52.7327 13.624 51.8847 14.376C51.0527 15.112 50.5567 16.072 50.3967 17.256H59.3487C59.1887 15.992 58.7007 15.008 57.8847 14.304C57.0687 13.6 56.1167 13.248 55.0287 13.248ZM63.5003 24V6.48H65.0843V24H63.5003ZM73.9896 11.712C75.7656 11.712 77.1976 12.344 78.2856 13.608C79.3896 14.856 79.9416 16.336 79.9416 18.048C79.9416 18.224 79.9256 18.472 79.8936 18.792H69.3576C69.5176 20.008 70.0296 20.976 70.8936 21.696C71.7736 22.4 72.8536 22.752 74.1336 22.752C75.0456 22.752 75.8296 22.568 76.4856 22.2C77.1576 21.816 77.6616 21.32 77.9976 20.712L79.3896 21.528C78.8616 22.376 78.1416 23.048 77.2296 23.544C76.3176 24.04 75.2776 24.288 74.1096 24.288C72.2216 24.288 70.6856 23.696 69.5016 22.512C68.3176 21.328 67.7256 19.824 67.7256 18C67.7256 16.208 68.3096 14.712 69.4776 13.512C70.6456 12.312 72.1496 11.712 73.9896 11.712ZM73.9896 13.248C72.7416 13.248 71.6936 13.624 70.8456 14.376C70.0136 15.112 69.5176 16.072 69.3576 17.256H78.3096C78.1496 15.992 77.6616 15.008 76.8456 14.304C76.0296 13.6 75.0776 13.248 73.9896 13.248ZM92.7812 12H94.3653V23.52C94.3653 25.248 93.7733 26.608 92.5893 27.6C91.4053 28.592 89.9893 29.088 88.3413 29.088C85.5253 29.088 83.6293 28.112 82.6533 26.16L84.0453 25.368C84.7653 26.824 86.1973 27.552 88.3413 27.552C89.7173 27.552 90.7973 27.184 91.5813 26.448C92.3813 25.728 92.7812 24.752 92.7812 23.52V21.648C91.6773 23.408 90.0613 24.288 87.9333 24.288C86.2213 24.288 84.7573 23.68 83.5413 22.464C82.3413 21.248 81.7413 19.76 81.7413 18C81.7413 16.24 82.3413 14.752 83.5413 13.536C84.7573 12.32 86.2213 11.712 87.9333 11.712C90.0613 11.712 91.6773 12.592 92.7812 14.352V12ZM84.6933 21.384C85.6053 22.296 86.7253 22.752 88.0533 22.752C89.3813 22.752 90.5013 22.296 91.4133 21.384C92.3253 20.456 92.7812 19.328 92.7812 18C92.7812 16.672 92.3253 15.552 91.4133 14.64C90.5013 13.712 89.3813 13.248 88.0533 13.248C86.7253 13.248 85.6053 13.712 84.6933 14.64C83.7813 15.552 83.3253 16.672 83.3253 18C83.3253 19.328 83.7813 20.456 84.6933 21.384ZM99.3031 13.992C100.039 12.536 101.303 11.808 103.095 11.808V13.344C102.007 13.344 101.103 13.664 100.383 14.304C99.6631 14.944 99.3031 15.952 99.3031 17.328V24H97.7191V12H99.3031V13.992ZM114.859 12H116.443V24H114.859V21.648C113.755 23.408 112.139 24.288 110.011 24.288C108.299 24.288 106.835 23.68 105.619 22.464C104.419 21.248 103.819 19.76 103.819 18C103.819 16.24 104.419 14.752 105.619 13.536C106.835 12.32 108.299 11.712 110.011 11.712C112.139 11.712 113.755 12.592 114.859 14.352V12ZM106.771 21.384C107.683 22.296 108.803 22.752 110.131 22.752C111.459 22.752 112.579 22.296 113.491 21.384C114.403 20.456 114.859 19.328 114.859 18C114.859 16.672 114.403 15.552 113.491 14.64C112.579 13.712 111.459 13.248 110.131 13.248C108.803 13.248 107.683 13.712 106.771 14.64C105.859 15.552 105.403 16.672 105.403 18C105.403 19.328 105.859 20.456 106.771 21.384ZM132.589 11.712C133.933 11.712 135.013 12.144 135.829 13.008C136.661 13.872 137.077 15.04 137.077 16.512V24H135.493V16.512C135.493 15.472 135.221 14.672 134.677 14.112C134.149 13.536 133.445 13.248 132.565 13.248C131.573 13.248 130.765 13.584 130.141 14.256C129.533 14.912 129.229 15.944 129.229 17.352V24H127.645V16.512C127.645 15.456 127.389 14.648 126.877 14.088C126.381 13.528 125.701 13.248 124.837 13.248C123.877 13.248 123.061 13.584 122.389 14.256C121.717 14.928 121.381 15.96 121.381 17.352V24H119.797V12H121.381V13.752C122.245 12.392 123.469 11.712 125.053 11.712C126.781 11.712 127.997 12.44 128.701 13.896C129.565 12.44 130.861 11.712 132.589 11.712Z"
+                                          fill="#23A0DD"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-contacts__group">
+                        <span class="header-contacts__heading">
+                             Обговорити ваш проєкт                        </span>
+                        <a href="mailto:manager@brainlab.com.ua"
+                           class="header-contacts__item">manager@brainlab.com.ua</a>
+                    </div>
+                    <div class="header-contacts__group">
+                        <span class="header-contacts__heading">
+                             Інші питання (партнерство, вакансії...)                        </span>
+                        <a href="mailto:info@brainlab.com.ua" class="header-contacts__item">
+							info@brainlab.com.ua                        </a>
+                    </div>
+                </div>
+                <div class="header-contacts__col">
+                    <div class="header-contacts__group">
+						                            <span class="header-contacts__heading">Наш офіс</span>
+                            <span class="header-contacts__item">Україна, Київ</span>
+						                    </div>
+
+                    <div class="header-contacts__group">
+                        <span class="header-contacts__heading">
+                            Ми в соцмережах                        </span>
+                        <div class="header-contacts__socials">
+                            <a href="https://www.facebook.com/brainlabstudio/" class="header-contacts__item"
+                               target="_blank">facebook</a>
+                            <a href="https://www.instagram.com/brainlab.web/?hl=ru" class="header-contacts__item"
+                               target="_blank">instagram</a>
+                            <a href="https://www.linkedin.com/company/brainlabstudio/" class="header-contacts__item"
+                               target="_blank">linkedin</a>
+                            <a href="https://www.behance.net/brainlabstudio" rel="nofollow"
+                               class="header-contacts__item" target="_blank">behance</a>
+                            <a href="https://vimeo.com/brainlabstudio" rel="nofollow" class="header-contacts__item"
+                               target="_blank">vimeo</a>
+                            <a href="https://www.pinterest.com/brainlab_studio/" class="header-contacts__item"
+                               target="_blank">pinterest</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cd-overlay-nav">
+        <span></span>
+    </div> <!-- cd-overlay-nav -->
+
+    <div class="cd-overlay-content">
+        <span></span>
+    </div> <!-- cd-overlay-content -->
+    <div id="content" class="site-content">
+
+	
+
+		
+
+
+
+<div class="bialty-container"><div class="fw-page-builder-content"><section class="fw-main-row about-us ecommerce">
+<video muted loop autoplay playsinline id="page-video">
+    		<source src="/wp-content/themes/brainlab/images/page-video.mp4" type="video/mp4">
+    	</source></video>	<div class="container ">
+		<div class="row">
+		<div class="col-lg-10 offset-lg-1 col-md-12">
+		<div class="row">
+	<div class="col-md-12 ">
+	<div class="kama_breadcrumbs"><span><a href="https://brainlab.com.ua/uk/glavnaya"><span>Веб студія</span></a></span><span class="kb_sep"> » </span>
+<span class="kb_title">Створення сайтів у Львові</span></div></div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12 col-md-8 ">
+	<h1><span>Створення сайту</span> <br>
+  у Львові</h1>
+<div class=" pr-md-0 mob-vis ">
+  <p>Львів неодноразово називали IT-столицею України. І справді, якщо подивитися на всі компанії у сфері IT розміщені у Львові, не залишиться сумнівів у тому, що найближчим часом онлайн бізнес тільки набиратиме обертів.
+  </p>
+  <p>Тому слід замислитися та оцінити стан вашого бізнесу, розробити чітку стратегію розвитку на найближчі роки та переконатися, що ваш бізнес гідно представлений в онлайні.</p>
+</div>
+<div class="btn-wrap mt-5 ">
+  <a href="#order" class="btn_action btn-small btn  btn-blue openorder"><span>Замовити проект</span> </a>
+</div></div>
+<div class="col-xs-12 col-md-4 pr-md-0 mob-hid">
+	<p>Львів неодноразово називали IT-столицею України. І справді, якщо подивитися на всі компанії у сфері IT розміщені у Львові, не залишиться сумнівів у тому, що найближчим часом онлайн бізнес тільки набиратиме обертів.
+  </p>
+  <p>Тому слід замислитися та оцінити стан вашого бізнесу, розробити чітку стратегію розвитку на найближчі роки та переконатися, що ваш бізнес гідно представлений в онлайні.</p></div>
+</div>
+
+		</div>
+		</div>
+	</div>
+</section>
+<section class="fw-main-row dark-parallax">
+	<div class="container ">
+		<div class="row">
+	</div>
+
+<div class="row">
+	<div class="col-lg-10 col-md-12 offset-lg-1 w-over">
+	<div class="row">
+  <div class="col-md-8 main-title fadeleft"><h2>Наш підхід</h2></div>
+</div>
+<div class="row">
+  <div class="col-md-4 fadetop">
+    <div class="studio-meta">001</div>
+    <div class="studio-text">
+      <h3>Стратегія</h3>
+      <p>Визначаємо цілі проекту<br>
+        Вивчаємо ЦА та конкурентів<br>
+        Розробляємо стратегію розвитку та позиціонування бренду
+      </p>
+    </div>
+  </div>
+  <div class="col-md-4 fadetop">
+    <div class="studio-meta">002</div>
+    <div class="studio-text">
+      <h3>Фокус на бізнес цілі</h3>
+      <p>При розробці дизайну тримаємо фокус на бізнес-цілях клієнта. Кожна сторінка орієнтована на конверсію.
+      </p>
+    </div>
+  </div>
+  <div class="col-md-4 fadetop">
+    <div class="studio-meta">003</div>
+    <div class="studio-text">
+      <h3>Підтримка та розвиток</h3>
+      <p>Слідкуємо за аналітикою<br>
+        Шукаємо вузькі місця та покращуємо продукт<br>
+        Підтримуємо та розвиваємо проект
+      </p>
+    </div>
+  </div>
+</div></div>
+</div>
+
+	</div>
+</section>
+<section class="fw-main-row price_table">
+	<div class="container ">
+		<div class="row">
+		<div class="col-lg-10 offset-lg-1 col-md-12">
+		<div class="row">
+	<div class="col-md-12 ">
+	<div class="main-title  fw-heading-h2 ">
+
+	<h2 class="title">Ціни на створення сайту</h2></div></div>
+</div>
+
+<div class="row">
+	<div class="col-md-12 ">
+	<div class="fw-table">
+	<table>
+									<thead>
+					<tr class="heading-row">
+													<th class="default-col">
+								Тип сайту							</th>
+													<th class="default-col">
+								Вартість							</th>
+													<th class="default-col">
+								Терміни створення							</th>
+											</tr>
+				</thead>
+												<tr class="default-row">
+											<td class="default-col">
+							Сайт візитка						</td>
+											<td class="default-col">
+							від $4000						</td>
+											<td class="default-col">
+							від 1 місяця						</td>
+									</tr>
+												<tr class="default-row">
+											<td class="default-col">
+							Landing page						</td>
+											<td class="default-col">
+							від $5000						</td>
+											<td class="default-col">
+							від 1 місяця						</td>
+									</tr>
+												<tr class="default-row">
+											<td class="default-col">
+							Бізнес сайт						</td>
+											<td class="default-col">
+							від $7000						</td>
+											<td class="default-col">
+							від 3 місяців						</td>
+									</tr>
+												<tr class="default-row">
+											<td class="default-col">
+							Корпоративний сайт						</td>
+											<td class="default-col">
+							від $8000						</td>
+											<td class="default-col">
+							від 3 місяців						</td>
+									</tr>
+												<tr class="default-row">
+											<td class="default-col">
+							Інтернет магазин						</td>
+											<td class="default-col">
+							від $12000						</td>
+											<td class="default-col">
+							від 5 місяців						</td>
+									</tr>
+												<tr class="default-row">
+											<td class="default-col">
+							Індивідуальний проект (CRM, LMS та ін.)						</td>
+											<td class="default-col">
+							від $15000 						</td>
+											<td class="default-col">
+							від 4 місяців						</td>
+									</tr>
+						</table>
+</div></div>
+</div>
+
+		</div>
+		</div>
+	</div>
+</section>
+<section class="fw-main-row portfolio-heading">
+	<div class="container ">
+		<div class="row">
+	<div class="col-md-12 ">
+	  <div class="custom-heading custom-heading--light">
+          <div class="row">
+        <div class="col-lg-10 offset-lg-1 col-md-12">
+          <h2 class="custom-heading__title">Портфоліо</h2>
+        </div>
+      </div>
+      </div>
+</div>
+</div>
+
+	</div>
+</section>
+<section class="fw-main-row portfolio">
+	<div class="container-fluid ">
+		<div class="row">
+	<div class="col-xs-12 col-md-4 portfolio-item fielmann-item white-portfolio-card col-lg-4 col-md-12">
+	
+  
+    <a href="https://brainlab.com.ua/uk/portfolio/fielmann-project">
+                            <div class="c-wrapper 1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="main-img"><div class="bialty-container"><img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" fetchpriority="high" decoding="async" width="779" height="350" data-src="https://brainlab.com.ua/wp-content/uploads/2021/08/fielmann-portfolio-1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Fielmann" data-srcset="https://brainlab.com.ua/wp-content/uploads/2021/08/fielmann-portfolio-1.png 779w, https://brainlab.com.ua/wp-content/uploads/2021/08/fielmann-portfolio-1-300x135.png 300w, https://brainlab.com.ua/wp-content/uploads/2021/08/fielmann-portfolio-1-768x345.png 768w" data-sizes="(max-width: 779px) 100vw, 779px"><noscript><img fetchpriority="high" decoding="async" width="779" height="350" src="https://brainlab.com.ua/wp-content/uploads/2021/08/fielmann-portfolio-1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Fielmann" srcset="https://brainlab.com.ua/wp-content/uploads/2021/08/fielmann-portfolio-1.png 779w, https://brainlab.com.ua/wp-content/uploads/2021/08/fielmann-portfolio-1-300x135.png 300w, https://brainlab.com.ua/wp-content/uploads/2021/08/fielmann-portfolio-1-768x345.png 768w" sizes="(max-width: 779px) 100vw, 779px"></noscript></div>
+</div>
+    <div class="overlay">
+                            <span class="meta-cat">Оптика</span>
+        
+        <div class="case-title">Fielmann</div>
+        <div class="item-more"> дивитися кейс            <span class="icon-arrow"></span>
+        </div>
+    </div>
+</a>
+</div>
+<div class="col-xs-12 col-md-4 portfolio-item wtech-item col-lg-4 col-md-12">
+	
+  
+    <a href="">
+                            <div class="c-wrapper 1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="main-img"></div>
+    <div class="overlay">
+                            <span class="meta-cat"> </span>
+        
+        <div class="case-title"></div>
+        <div class="item-more"> дивитися кейс            <span class="icon-arrow"></span>
+        </div>
+    </div>
+</a>
+</div>
+<div class="col-xs-12 col-md-4 portfolio-item vovk-item white-portfolio-card col-lg-4 col-md-12">
+	
+  
+    <a href="https://brainlab.com.ua/uk/portfolio/vovk-project">
+                            <div class="c-wrapper 1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="main-img"><div class="bialty-container"><img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" width="461" height="657" data-src="https://brainlab.com.ua/wp-content/uploads/2021/08/vovk-portfolio-1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Vovk" data-srcset="https://brainlab.com.ua/wp-content/uploads/2021/08/vovk-portfolio-1.png 461w, https://brainlab.com.ua/wp-content/uploads/2021/08/vovk-portfolio-1-211x300.png 211w" data-sizes="(max-width: 461px) 100vw, 461px"><noscript><img decoding="async" width="461" height="657" src="https://brainlab.com.ua/wp-content/uploads/2021/08/vovk-portfolio-1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Vovk" srcset="https://brainlab.com.ua/wp-content/uploads/2021/08/vovk-portfolio-1.png 461w, https://brainlab.com.ua/wp-content/uploads/2021/08/vovk-portfolio-1-211x300.png 211w" sizes="(max-width: 461px) 100vw, 461px"></noscript></div>
+</div>
+    <div class="overlay">
+                            <span class="meta-cat">Жіночий одяг</span>
+        
+        <div class="case-title">Vovk</div>
+        <div class="item-more"> дивитися кейс            <span class="icon-arrow"></span>
+        </div>
+    </div>
+</a>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12 col-md-4 portfolio-item urbanistyka_hub-item col-lg-4 col-md-12">
+	
+  
+    <a href="https://brainlab.com.ua/uk/portfolio/urbanistyka-hub-project">
+                            <div class="c-wrapper 1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="main-img"><div class="bialty-container"><img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" width="717" height="496" data-src="https://brainlab.com.ua/wp-content/uploads/2021/08/urbanistyka_hub-portfolio-1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Urbanistyka Hub" data-srcset="https://brainlab.com.ua/wp-content/uploads/2021/08/urbanistyka_hub-portfolio-1.png 717w, https://brainlab.com.ua/wp-content/uploads/2021/08/urbanistyka_hub-portfolio-1-300x208.png 300w" data-sizes="(max-width: 717px) 100vw, 717px"><noscript><img decoding="async" width="717" height="496" src="https://brainlab.com.ua/wp-content/uploads/2021/08/urbanistyka_hub-portfolio-1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Urbanistyka Hub" srcset="https://brainlab.com.ua/wp-content/uploads/2021/08/urbanistyka_hub-portfolio-1.png 717w, https://brainlab.com.ua/wp-content/uploads/2021/08/urbanistyka_hub-portfolio-1-300x208.png 300w" sizes="(max-width: 717px) 100vw, 717px"></noscript></div>
+</div>
+    <div class="overlay">
+                            <span class="meta-cat"> </span>
+        
+        <div class="case-title">Urbanistyka Hub</div>
+        <div class="item-more"> дивитися кейс            <span class="icon-arrow"></span>
+        </div>
+    </div>
+</a>
+</div>
+<div class="col-xs-12 col-md-4 portfolio-item gant-item white-portfolio-card col-lg-4 col-md-12">
+	
+  
+    <a href="https://brainlab.com.ua/uk/portfolio/gant-project">
+                            <div class="c-wrapper 1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="main-img"><div class="bialty-container"><img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" width="779" height="617" data-src="https://brainlab.com.ua/wp-content/uploads/2021/08/gant-portfolio-1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Gant" data-srcset="https://brainlab.com.ua/wp-content/uploads/2021/08/gant-portfolio-1.png 779w, https://brainlab.com.ua/wp-content/uploads/2021/08/gant-portfolio-1-300x238.png 300w, https://brainlab.com.ua/wp-content/uploads/2021/08/gant-portfolio-1-768x608.png 768w" data-sizes="(max-width: 779px) 100vw, 779px"><noscript><img decoding="async" width="779" height="617" src="https://brainlab.com.ua/wp-content/uploads/2021/08/gant-portfolio-1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Gant" srcset="https://brainlab.com.ua/wp-content/uploads/2021/08/gant-portfolio-1.png 779w, https://brainlab.com.ua/wp-content/uploads/2021/08/gant-portfolio-1-300x238.png 300w, https://brainlab.com.ua/wp-content/uploads/2021/08/gant-portfolio-1-768x608.png 768w" sizes="(max-width: 779px) 100vw, 779px"></noscript></div>
+</div>
+    <div class="overlay">
+                            <span class="meta-cat"> </span>
+        
+        <div class="case-title">Gant</div>
+        <div class="item-more"> дивитися кейс            <span class="icon-arrow"></span>
+        </div>
+    </div>
+</a>
+</div>
+<div class="col-xs-12 col-md-4 portfolio-item more-case col-lg-4 col-md-12">
+	<a href="/uk/portfolio"><span class="c-wrapper">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        
+                    </span>
+                    <span class="overlay">
+                        
+                        <span class="item-more">дивитися кейси <span class="icon-arrow"></span></span>
+                    </span></a></div>
+</div>
+
+	</div>
+</section>
+<section class="fw-main-row have-questions">
+	<div class="container ">
+		<div class="row">
+	<div class="col-md-12 ">
+	<div class="main-title  fw-heading-h2 ">
+
+	<h2 class="title">Є питання?</h2><div class="subtitle">
+Давайте обговоримо ваші завдання. Зв'яжіться сьогодні!</div>
+</div></div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12 col-md-6 ">
+	
+<div uk></div>
+<div class="row">
+    <div class="col-md-10">
+        <form novalidate="" class="order-form order-form-right new-question-form-ajax">
+            <div class="col-md-12 form-input">
+                <div class="row">
+
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control" name="new-question-form-name" id="new-question-form-name" required>
+                        <label for="new-question-form-name">
+                            <span>Введіть ваше ім'я</span>
+                        </label>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control empty" name="new-question-form-phone" id="new-question-form-phone" required>
+                        <label for="new-question-form-phone">
+                            <span>Номер телефону *</span>
+                        </label>
+                        <div class="invalid-feedback">Заповніть телефон</div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control" name="new-question-form-email" id="new-question-form-email" required>
+                        <label for="new-question-form-email">
+                            <span>Email *</span>
+                        </label>
+                        <div class="invalid-feedback">Заповніть email</div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <div class="custom-select">
+                            <select name="new-question-form-budget">
+                                <option value="default">Бюджет *</option>
+                                <option value="less-10k">
+									менше $10K                                </option>
+                                <option value="10k-30k">$10K-30K</option>
+                                <option value="more-30k">
+									більше $30K                                </option>
+                                <option value="need-estimate">
+									потрібен прорахунок                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-12 form-group-textarea">
+                        <textarea value="" required size="16" name="new-question-form-about" id="new-question-form-about" class="form-control"></textarea>
+                        <label for="new-question-form-about">
+                            <span>
+                                Коротко про ваш проект                            </span>
+                        </label>
+                    </div>
+
+                    <input type="hidden" name="new-question-form-event" value="Є запитання">
+                    <input type="hidden" name="new-question-form-page_id" value="6452">
+                    <input type="hidden" name="new-question-form-fbclid_2" value="">
+                    <input type="hidden" name="new-question-form-gclid_2" value="">
+                    
+                    <input style="display: none;" type="text" name="new-question-form-for_bot_2" value="">
+                    <input type="hidden" name="new-question-form-user_ip_2" value="92.253.236.151">
+
+                    <div class="g-recaptcha-container" id="new_question_form_RecaptchaContainer" style="align-items: start;padding-left: 15px;">
+                        <div id="new_question_form_Captcha"></div>
+                    </div>
+
+                    <div class="col-md-12 btn-wrap">
+                        <button class="btn btn_action btn-blue btn-block" type="submit">
+                            <span>Відправити</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div></div>
+<div class="col-xs-12 col-md-6 ">
+	<div class="have-question-gif">
+  <div class="timeout-load" data-src="/wp-content/themes/brainlab/images/have-questions.gif"></div>
+</div></div>
+</div>
+
+	</div>
+</section>
+<section class="fw-main-row partners">
+	<div class="container ">
+		<div class="row">
+	</div>
+
+<div class="row">
+	<div class="col-lg-10 col-md-12 offset-lg-1">
+	
+<div class="main-title fw-heading-h2 partners-v2-inner">
+  <h2 class="title">
+                  Наші клієнти
+            </h2>
+  <div class="subtitle">
+                  Ми працюємо з різними сферами бізнесу.
+            </div>
+</div>
+
+<div class="row align-items-center p-logos">
+  
+  <div class="col partner-logo">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/unido.svg" alt="unido"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/unido.svg" alt="unido"></noscript>
+  </div>
+  <div class="col partner-logo maw80">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/ministry_of_digital_transformation_of_ukraine-1.svg" alt="mdtu"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/ministry_of_digital_transformation_of_ukraine-1.svg" alt="mdtu"></noscript>
+  </div>
+  <div class="col partner-logo">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/uacc.jpg" alt="uacc"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/uacc.jpg" alt="uacc"></noscript>
+  </div>
+  <div class="col partner-logo">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/kaizen.svg" alt="kaizen"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/kaizen.svg" alt="kaizen"></noscript>
+  </div>
+  <div class="col partner-logo">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/ssscip.svg" alt="ssscip"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/ssscip.svg" alt="ssscip"></noscript>
+  </div>
+  <div class="col partner-logo">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/blauberg-1.svg" alt="blauberg"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/blauberg-1.svg" alt="blauberg"></noscript>
+  </div>
+  <div class="col partner-logo">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/abm.svg" alt="abm"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/abm.svg" alt="abm"></noscript>
+  </div>
+  <div class="col partner-logo">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/fielman.svg" alt="fielmann"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/fielman.svg" alt="fielmann"></noscript>
+  </div>
+  <div class="col partner-logo">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/wtech.svg" alt="wtech"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/wtech.svg" alt="wtech"></noscript>
+  </div>
+  <div class="col partner-logo">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/kunsht.svg" alt="kunsht"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/kunsht.svg" alt="kunsht"></noscript>
+  </div>
+  <div class="col partner-logo">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/vovk.svg" alt="vovk"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/vovk.svg" alt="vovk"></noscript>
+  </div>
+  <div class="col partner-logo">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/fudjitsu.svg" alt="fujitsu"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/fudjitsu.svg" alt="fujitsu"></noscript>
+  </div>
+  <div class="col partner-logo">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/affhub_logo.svg" alt="affhub"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/affhub_logo.svg" alt="affhub"></noscript>
+  </div>
+  <div class="col partner-logo">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/axdraft.svg" alt="axdraft"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/axdraft.svg" alt="axdraft"></noscript>
+  </div>
+  <div class="col partner-logo">
+    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2023/08/wuerth-logo-1.svg" alt="wurth"><noscript><img decoding="async" src="/wp-content/uploads/2023/08/wuerth-logo-1.svg" alt="wurth"></noscript>
+  </div>
+</div>
+</div>
+</div>
+
+	</div>
+</section>
+<section class="fw-main-row s-contacts">
+	<div class="container ">
+		<div class="row">
+	<div class="col-md-12 ">
+	<div class="row">
+  <div class="col-md-10 offset-md-1 ">
+    <div class="main-title">
+              <span>Довірте нам ваш проєкт! <br> Чекаємо вашу заявку.</span>
+          </div>
+    <div class="row">
+      <div class="col-md-7 col-lg-8">
+        <div class="subtitle">
+                        Розробляємо IT-рішення з гарантією з 2012 року.
+                  </div>
+        <div class="row"  >
+          <div class="col-md-6 c-column">
+            <p>
+              <span>
+                                  Обговорити ваш проєкт
+                              </span>
+            </p>
+            <p ><a href="mailto:manager@brainlab.com.ua">manager@brainlab.com.ua</a></p>
+            <div class="mt-3 mt-md-5">
+              <p>
+                <span>
+                                      Інші питання (партнерство, вакансії...)
+                                  </span>
+              </p>
+              <p ><a href="mailto:info@brainlab.com.ua">info@brainlab.com.ua</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 c-column">
+            <div class="mt-3 mt-md-5">
+              <p>
+                <span>
+                                      Ми в соцмережах
+                                  </span>
+              </p>
+              <div class="s-social">
+                <a href="https://www.facebook.com/brainlabstudio/">facebook</a>
+                <a href="https://www.instagram.com/brainlab.web/?hl=ru">instagram</a>
+                <a href="https://www.linkedin.com/company/brainlabstudio/">linkedin</a>
+                <a href="https://www.behance.net/brainlabstudio" rel="nofollow">behance</a>
+                <a href="https://vimeo.com/brainlabstudio" rel="nofollow">vimeo</a>
+                <a href="https://www.pinterest.com/brainlab_studio/">pinterest</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 col-lg-4">
+        <a href="#order" class="btn_action btn btn-blue btn-block openorder">
+          <span>
+                          Відправити запит
+                      </span>
+        </a>
+                <div class="social-items">
+          
+          <a href="https://t.me/brain_lab" target="_blank" class="social-item telegram">
+            <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/themes/brainlab/img/telegram.svg" alt="telegram"><noscript><img decoding="async" src="/wp-content/themes/brainlab/img/telegram.svg" alt="telegram"></noscript>
+            <span class="social-item-text">
+              Telegram
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+	</div>
+</section>
+<section class="fw-main-row bottom">
+	<div class="container ">
+		<div class="row">
+	</div>
+
+<div class="row">
+	<div class="col-lg-10 col-md-12 offset-lg-1">
+	<div class="row">
+  <div class="col-md-9">
+    <div class="bottom-text">
+      <p>У сучасному світі наявність власного сайту – це безпрограшна можливість заявити про себе якомога більшій кількості людей (потенційним клієнтам) та привернути їхню увагу. Замовити створення сайту у Львові прагне кожна компанія, яка займається веденням бізнесу. Веб студія BrandLab створює найкращі сайти під будь-який бізнес у обумовлений термін.</p>
+      <h2>Визначальні моменти у виборі веб-студії у Львові</h2>
+      <p>Сайти створюють для того, щоб у найкоротший термін поінформувати широку аудиторію про запропоновані вами товари та послуги. Саме віртуальний офіс служить чудовим рекламним майданчиком, а це означає, що сайт має бути привабливим, зрозумілим і мати форму зворотнього зв'язку.</p>
+
+      <p>Довіряти створення сайту необхідно лише професіоналам, які дадуть гарантію того, що веб-ресурс буде інформативним, функціональним та презентабельним.</p>
+
+      <p>На сьогоднішній день послуги з розробки сайтів у Львові пропонують численні студії, а також приватні особи. Важливо вибрати таке агентство, співробітники якого мають досвід у сфері створення сайтів під ключ. Саме така послуга має на увазі тісне співробітництво між клієнтом та виконавцем.</p>
+
+      <p>Бізнесменам, які цікавляться розробкою сайтів, Львів запропонує численні варіанти на вибір. Проте далеко не всі агентства мають достатній ресурс, щоб створити дійсно вартісний проект. При виборі компанії рекомендуємо керуватися деякими простими правилами:</p><ul>
+
+      <li>Пропишіть у пошуковій системі “виготовлення сайту Львів” та відвідайте кілька перших сайтів. Потенційний виконавець повинен мати привабливий і зручний ресурс, який не викликає питань.</li>
+      <li>Рекомендуємо вивчити портфоліо веб-агентства, де будуть розміщені їхні реальні роботи.</li>
+      <li>Вивчити відгуки про обрану вами компанію. Безумовно, деякі відгуки можуть бути написані самими розробниками або конкурентами, тому не робіть висновок після першого відгуку.</li>
+      <li>Якщо на сайті розробника вказано номер телефону, зателефонуйте на нього та поспілкуйтеся зі співробітниками. Живе спілкування може сказати багато про що.</li></ul>
+      <h2>Розробка сайту: огляд ринку</h2>
+      <p>Залежно від поставлених цілей та завдань виділяють кілька типів сайтів:</p><ol>
+
+      <li>Лендінг. Такий ресурс ще називають посадковою сторінкою. Він є спроектованою веб-сторінкою сайту, мета якої – спонукати відвідувачів до здійснення певної дії. Наприклад, передплатити розсилку, придбати товар, замовити послугу.</li>
+      <li>Сайт-візитівка. Багато хто плутає його з лендінгом, але насправді це різні ресурси. Основна мета сайту-візитки у тому, щоб просувати свій бізнес. Можна сказати такий ресурс виступає у ролі реклами. Це може бути або скромна персональна сторінка, або великі корпоративні ресурси. Тут немає обмежень.</li>
+      <li>Корпоративний сайт. Тут уже йдеться про повноцінне представництво компанії в Мережі. Такий ресурс містить повну інформацію про фірму, послуги, продукцію та ін. Він повинен бути функціональним і мати інтеграцію з внутрішніми системами компанії.</li>
+      <li>Інтернет-магазин. Продажем товару через світову мережу вже нікого не здивуєш. Наявність власного інтернет-магазину – це розумний спосіб збільшити продаж. Такий ресурс повинен містити каталог із картками товару, кошик, форму замовлення та зворотнього зв'язку. Замовити розробку інтернет-магазину у Львові можуть не лише власники великих компаній, а й власники малого бізнесу.</li>
+      <li>Промо-сайт. Такий сайт призначений для того, щоб рекламувати новий товар. Крім того, цей ресурс потрібен для отримання лояльності та визнання від клієнтів. Вже сама назва говорить про те, що вона спрямована на рекламування.</li>
+      <li>Персональний сайт. Такий ресурс створюються не задля підприємств, а для приватних осіб. Такий ресурс має бути невеликого обсягу і містить інформацію про самого власника сайту та послуги, які він надає.</li>
+      <li>Портали - ресурси з величезною кількістю інформації. Користувач може знайти тут все: новини, голосування, блоги та ін.</li></ol>
+      <h2>Як відбувається створення сайтів у Львові</h2>
+      <p>Компанія БрейнЛаб пропонує послуги із створення сайтів у Львові та інших містах України. Розробка сайту складається з кількох етапів:</p><ul>
+
+      <li>Аналіз ринку. Це важливий момент, де професіонали веб-агентства вивчають конкурентів та заглиблюються в нішу замовника.</li>
+      <li>Розробка технічного завдання (ТЗ). Воно складається з блоків схем майбутнього сайту та його функціоналу. Воно складається на основі заповненого клієнтом брифа.</li>
+      <li>Опрацювання дизайну. Професіонали BrainLab розробляють унікальний дизайн кожної сторінки сайту. Безумовно, раніше все обмовляється із замовником.</li>
+      <li>Програмування. Фахівці пишуть код, налаштовують усі необхідні модулі.</li>
+      <li>Верстка. Обов'язково створюється адаптивна верстка під мобільні пристрої.</li>
+      <li>Тестування. Важливий момент, де перевіряють новий сайт на помилки.</li>
+      <li>Наповнення ресурсу контентом.</li>
+      <li>Навчання персоналу роботі в адмінці сайту.</li></ul>
+      <h2>Критерії успішного сайту</h2>
+      <p>На жаль, не всі сайти, які ми бачимо на просторах Інтернету, якісні та зручні. Можна виділити три основні критерії успішного сайту. Розглянемо докладніше.</p>
+      <h3>Функціональний інтерфейс</h3>
+      <p>Потрапивши на сайт, перше, на що дивиться користувач — дизайн ресурсу. Він повинен повністю відображати стиль компанії та бути простим для користувача. Пам'ятайте і те, що якщо сайт погано вантажиться або користувач не може знайти потрібну інформацію протягом 3-5 секунд, він просто піде на інший сайт.</p>
+      <h3>Стабільність та надійність</h3>
+      <p>Надійна платформа - це гарантія того, що сайт працюватиме надійно, без перебоїв. Також від двигуна залежить і функціонал ресурсу. Обов'язково зверніть на це увагу.</p>
+      <h3>Відповідність потребам цільової аудиторії</h3>
+
+      <p>Користувач заходить на сайт з певною метою, а це означає, що ви повинні надати йому всю потрібну інформацію про товар або послугу. Знову ж таки, всього протягом декількох секунд користувач повинен знайти відповіді на свої запитання, інакше він просто піде з вашого сайту.</p>
+      <h2>З чого складається вартість розробки сайту?</h2>
+      <p>Вартість готового проекту залежить від того який сайт потрібен, це буде шаблонним ресурсом або 100% унікальною розробкою. Також ціну формують:</p><ul>
+
+      <li>Тип сайту (про них ми писали вище).</li>
+      <li>Складність структури.</li>
+      <li>Кількість унікальних сторінок.</li>
+      <li>Необхідність збору семантики.</li>
+      <li>Складність дизайну та верстки.</li>
+      <li>Домен та хостинг.</li>
+      <li>Типу движка (СМS).</li>
+      <li>Адаптація під інші пристрої.</li></ul>
+
+      <p>На вартість також впливає і кваліфікація розробника. Фрілансер, який не зможе надати замовнику гарантію на роботу, візьме менше грошей, ніж досвідчена компанія з об'ємним портфоліо.</p>
+      <h2>Переваги виготовлення сайтів від студії BrainLab</h2>
+      <p>Веб-студія BrainLab пропонує якісні послуги з розробки сайтів у Львові. До основних переваг агенції можна віднести:</p><ul>
+
+      <li>Прозорість умов співпраці. Перед початком роботи між компанією та замовником підписується договір.</li>
+      <li>Адекватна ціна та можливість платити частинами. Наприклад, 50:50 або 60:40.</li>
+      <li>Реалізація проекту будь-якої складності, починаючи від лендингу, закінчуючи великим інтернет-магазином.</li>
+      <li>Підтримка 24/7. На кожному етапі розробки менеджери компанії звітують перед замовникам.</li></ul>
+
+      <p>Сайт повинен приносити прибуток бізнесу, тому краще звертатися до професіоналів, таких як BrainLab.</p>
+
+    </div>
+    <div class="caution"><span><img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" width="18" height="25" data-src="/wp-content/themes/brainlab/images/fire.png" style="display: inline-block; vertical-align: top;" alt="Gant"><noscript><img decoding="async" width="18" height="25" src="/wp-content/themes/brainlab/images/fire.png" style="display: inline-block; vertical-align: top;" alt="Gant"></noscript></span>Caution! This seo text. Be careful.</div>
+  </div>
+  <div class="col-md-3 b-block"><img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" decoding="async" data-src="/wp-content/uploads/2019/05/b.png" alt="Gant"><noscript><img decoding="async" src="/wp-content/uploads/2019/05/b.png" alt="Gant"></noscript></div>
+</div></div>
+</div>
+
+	</div>
+</section>
+<section class="fw-main-row ">
+	<div class="container ">
+		<div class="row">
+	<div class="col-md-12 ">
+	<span id="order"></span></div>
+</div>
+
+	</div>
+</section>
+<section class="fw-main-row bottom-form">
+	<div class="container ">
+		<div class="row">
+	<div class="col-xs-12 col-md-9 offset-md-1">
+	<div class="main-title  fw-heading-h2 ">
+
+	<h2 class="title">Хочете зробити щось велике? <br> Дозвольте допомогти вам.</h2><div class="subtitle">
+Чи готові? Зв'яжіться сьогодні.</div>
+</div></div>
+</div>
+
+<div class="row">
+	<div class="col-md-12 ">
+	
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <div class="row">
+      <form novalidate="" class="order-form">
+        <div class="hidden checkbox-wrap">
+          <div class="checkbox-title">Послуги</div>
+          <div class="form-check-wrap">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="ecommerce" id="ecommerce" name="services[]">
+              <label class="form-check-label" for="ecommerce">
+                Інтернет магазин
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Корпоративный сайт" id="corpsite" name="services[]">
+              <label class="form-check-label" for="corpsite">
+                Корпоративний сайт
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Landing Pages" id="landingpage" name="services[]">
+              <label class="form-check-label" for="landingpage">
+                Landing Pages
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="WOW сайт" id="wowsite" name="services[]">
+              <label class="form-check-label" for="wowsite">
+                WOW сайт
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Комплексные решения" id="complex" name="services[]">
+              <label class="form-check-label" for="complex">
+                Комплексні рішення
+              </label>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-12 form-input">
+          <div class="row">
+            <div class="form-group col-md-4">
+
+              <input type="text" class="form-control" id="nme" required>
+              <label for="nme"><span>Введіть ваше ім'я *</span></label>
+              <div class="invalid-feedback">Заповніть ім'я</div>
+            </div>
+            <div class="form-group col-md-4">
+
+              <input type="text" class="form-control empty" id="phone" pattern="\+[0-9]{2} [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+              <label for="phone"><span>Номер телефону *</span></label>
+              <div class="invalid-feedback">Заповніть телефону</div>
+            </div>
+            <div class="form-group col-md-4">
+
+              <input type="text" class="form-control" id="Email" required>
+              <label for="Email"><span>Email *</span></label>
+              <div class="invalid-feedback foremail">Заповніть email</div>
+            </div>
+            <div class="form-group col-md-6">
+              <div class="custom-select">
+                <select name="services" id="select-services">
+                  <option value="default">Тип сайту</option>
+                  <option value="landingpage">Landing page</option>
+                  <option value="corp-business">Корпоративний/Бізнес сайт</option>
+                  <option value="ecommerce">Інтернет магазин</option>
+                  <option value="cutaway">Сайт візитка</option>
+                  <option value="design">Дизайн сайту</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <div class="custom-select">
+                <select name="budget" id="select-budget">
+                  <option value="default">Бюджет</option>
+                  <option value="less-10k">< $10K</option>
+                  <option value="10k-30k">$10K-30K</option>
+                  <option value="more-30k">> $30K</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-md-12">
+
+              <textarea class="form-control" id="projects" required></textarea>
+              <label for="projects"><span>Подробиці проекту</span></label>
+
+            </div>
+
+            <input type="hidden" id="order_page_id" value="6452">
+
+
+            <input type="hidden" id="fbclid" value="">
+            <input type="hidden" id="gclid" value="">
+            <input type="hidden" id="what_form" value="Дозвольте вам допомогти">
+            <input style="display: none;" type="text" id="for_bot" value="">
+            <input type="hidden" id="order_user_ip" value="92.253.236.151">
+
+
+            <div class="col-md-12" id="submit-ajax"></div>
+            <div class="col-md-4 btn-wrap">
+              <button class="btn btn-white btn-block submit-button" type="submit"><span>Надіслати</span></button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+	</div>
+</section>
+</div>
+
+
+<div class="kk-star-ratings kksr-auto kksr-align-left kksr-valign-bottom" data-payload='{"align":"left","id":"5759","slug":"default","valign":"bottom","ignore":"","reference":"auto","class":"","count":"0","legendonly":"","readonly":"","score":"0","starsonly":"","best":"5","gap":"4","greet":"Rate this fw-portfolio","legend":"0\/5 - (0 votes)","size":"24","title":"Gant","width":"0","_legend":"{score}\/{best} - ({count} {votes})","font_factor":"1.25"}'>
+            
+<div class="kksr-stars">
+    
+<div class="kksr-stars-inactive">
+            <div class="kksr-star" data-star="1" style="padding-right: 4px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" data-star="2" style="padding-right: 4px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" data-star="3" style="padding-right: 4px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" data-star="4" style="padding-right: 4px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" data-star="5" style="padding-right: 4px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+    </div>
+    
+<div class="kksr-stars-active" style="width: 0px;">
+            <div class="kksr-star" style="padding-right: 4px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" style="padding-right: 4px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" style="padding-right: 4px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" style="padding-right: 4px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+            <div class="kksr-star" style="padding-right: 4px">
+            
+
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+        </div>
+    </div>
+</div>
+                
+
+<div class="kksr-legend" style="font-size: 19.2px;">
+            <span class="kksr-muted">Rate this fw-portfolio</span>
+    </div>
+    </div>
+</div>
+
+	
+
+
+
+</div><!-- #content -->
+
+
+</div><!-- #page -->
+
+
+
+    <footer class="footer white theme-second">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <div class="footer-cols">
+                            <div class="footer-col footer-logo">
+                                <a href="https://brainlab.com.ua/uk/glavnaya" class="footer-logo-link">
+                                    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="https://brainlab.com.ua/wp-content/themes/brainlab/images/logowhite.svg"
+                                         class="logo-white"><noscript><img src="https://brainlab.com.ua/wp-content/themes/brainlab/images/logowhite.svg"
+                                         class="logo-white"></noscript>
+                                    <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="https://brainlab.com.ua/wp-content/themes/brainlab/images/logoblack.svg"
+                                         class="logo-black"><noscript><img src="https://brainlab.com.ua/wp-content/themes/brainlab/images/logoblack.svg"
+                                         class="logo-black"></noscript>
+                                </a>
+                                <div class="col-title">
+                                    <div class="col-title-text">Контакти</div>
+                                    <div class="expand"></div>
+                                </div>
+                                <div class="col-items">
+                                    <div class="sub-title">Адреса:</div>
+                                    <div class="col-item">Україна, м. Київ</div>
+                                    <div class="sub-title">E-mail для замовлень:</div>
+                                    <a href="mailto:manager@brainlab.com.ua"
+                                       class="col-item">manager@brainlab.com.ua</a>
+                                    <div class="sub-title">Інші питання (партнерство, вакансії...)</div>
+                                    <a href="mailto:info@brainlab.com.ua" class="col-item">info@brainlab.com.ua</a>
+                                    <div class="social-items">
+                                        <a href="https://t.me/brain_lab" target="_blank" class="social-item telegram">
+                                            <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/wp-content/themes/brainlab/img/telegram.svg" alt="telegram"><noscript><img src="/wp-content/themes/brainlab/img/telegram.svg" alt="telegram"></noscript>
+                                            <span class="social-item-text">
+                        Telegram
+                      </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-col footer-contacts">
+                                <div class="col-title">
+                                    <div class="col-title-text">Контакти</div>
+                                    <div class="expand"></div>
+                                </div>
+                                <div class="col-items">
+                                    <div class="sub-title">Адреса:</div>
+                                    <div class="col-item">Україна, м. Київ</div>
+                                    <div class="sub-title">E-mail для замовлень:</div>
+                                    <a href="mailto:manager@brainlab.com.ua"
+                                       class="col-item">manager@brainlab.com.ua</a>
+                                    <div class="sub-title">Інші питання (партнерство, вакансії...)</div>
+                                    <a href="mailto:info@brainlab.com.ua" class="col-item">info@brainlab.com.ua</a>
+                                    <div class="social-items">
+
+                                        <a href="https://t.me/brain_lab" target="_blank" class="social-item telegram">
+                                            <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="/wp-content/themes/brainlab/img/telegram.svg" alt="telegram"><noscript><img src="/wp-content/themes/brainlab/img/telegram.svg" alt="telegram"></noscript>
+                                            <span class="social-item-text">
+                        Telegram
+                      </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-col footer-menu-1">
+                                <div class="col-title">
+                                    <div class="col-title-text">Послуги</div>
+                                    <div class="expand"></div>
+                                </div>
+                                <div class="col-items">
+									<div class="menu-footer-menu-1-ukr-container"><ul id="menu-footer-menu-1-ukr" class="menu"><li id="menu-item-3092" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3092"><a href="https://brainlab.com.ua/uk/poslugi/landing-page">Landing page</a></li>
+<li id="menu-item-3096" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3096"><a href="https://brainlab.com.ua/uk/poslugi/korporativni-sajti">Корпоративні сайти</a></li>
+<li id="menu-item-3095" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3095"><a href="https://brainlab.com.ua/uk/poslugi/internet-magazin">Інтернет магазин</a></li>
+<li id="menu-item-3093" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3093"><a href="https://brainlab.com.ua/uk/poslugi/biznes-sajt">Бізнес сайт</a></li>
+<li id="menu-item-3097" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3097"><a href="https://brainlab.com.ua/uk/poslugi/sajt-vizitka">Сайт візитка</a></li>
+<li id="menu-item-3094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3094"><a href="https://brainlab.com.ua/uk/poslugi/dizajn-sajtu">Дизайн сайту</a></li>
+<li id="menu-item-3091" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3091"><a href="https://brainlab.com.ua/uk/poslugi">Розробка сайту</a></li>
+<li id="menu-item-3090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3090"><a href="https://brainlab.com.ua/uk/redizajn-sajtu">Редизайн сайту</a></li>
+<li id="menu-item-7316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7316"><a href="https://brainlab.com.ua/uk/rozrobka-ecommerce-proektiv">Ecommerce проекти</a></li>
+<li id="menu-item-9292" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9292"><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-crm-sistem">CRM система</a></li>
+<li id="menu-item-12694" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12694"><a href="https://brainlab.com.ua/uk/poslugi/rozrobka-single-page-application">Single Page Application</a></li>
+</ul></div>                                </div>
+                            </div>
+                            <div class="footer-col footer-menu-2">
+                                <div class="col-title">
+                                    <div class="col-title-text">Інформація</div>
+                                    <div class="expand"></div>
+                                </div>
+                                <div class="col-items">
+									<div class="menu-footer-menu-2-ukr-container"><ul id="menu-footer-menu-2-ukr" class="menu"><li id="menu-item-3085" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3085"><a href="https://brainlab.com.ua/uk/o-studii">Про нас</a></li>
+<li id="menu-item-3086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3086"><a href="https://brainlab.com.ua/uk/poslugi">Послуги</a></li>
+<li id="menu-item-3089" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3089"><a href="/uk/portfolio">Портфоліо</a></li>
+<li id="menu-item-3084" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3084"><a href="https://brainlab.com.ua/uk/blog-uk">Блог</a></li>
+<li id="menu-item-3088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3088"><a href="https://brainlab.com.ua/uk/stvorennya-sajtu-na-wp">Створення сайту на WordPress</a></li>
+<li id="menu-item-3087" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3087"><a href="https://brainlab.com.ua/uk/stvorennya-sajtu-na-opencart">Створення сайту на Opencart</a></li>
+<li id="menu-item-7317" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-6452 current_page_item menu-item-7317"><a href="https://brainlab.com.ua/uk/stvorennya-sajtu-u-lvovi" aria-current="page">Створення сайтів у Львові</a></li>
+<li id="menu-item-7318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7318"><a href="https://brainlab.com.ua/uk/stvorennya-sajtu-u-harkovi">Створення сайтів у Харкові</a></li>
+<li id="menu-item-7319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7319"><a href="https://brainlab.com.ua/uk/stvorennya-sajtu-u-dnipri">Створення сайту у Дніпрі</a></li>
+</ul></div>                                </div>
+                            </div>
+                            <div class="footer-col footer-menu-3">
+                                <div class="col-title">
+                                    <div class="col-title-text">Соц. мережі</div>
+                                    <div class="expand"></div>
+                                </div>
+                                <div class="col-items">
+									<div class="menu-footer-menu-3-ukr-container"><ul id="menu-footer-menu-3-ukr" class="menu"><li id="menu-item-3078" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3078"><a target="_blank" href="https://www.facebook.com/brainlabstudio/">Facebook</a></li>
+<li id="menu-item-3079" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3079"><a target="_blank" href="https://www.instagram.com/brainlab.web/">Instagram</a></li>
+<li id="menu-item-3080" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3080"><a target="_blank" href="https://www.linkedin.com/company/brainlabstudio/">Linkedin</a></li>
+<li id="menu-item-3081" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3081"><a target="_blank" href="https://www.behance.net/brainlabstudio">Behance</a></li>
+<li id="menu-item-3082" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3082"><a target="_blank" href="https://vimeo.com/brainlabstudio">Vimeo</a></li>
+<li id="menu-item-3083" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3083"><a target="_blank" href="https://www.pinterest.com/brainlab_studio/">Pinterest</a></li>
+</ul></div>                                </div>
+                            </div>
+                        </div>
+                        <div class="line-lg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1 d-flex justify-content-between align-items-center">
+                        <div class="flex-fill">
+                <span>
+                    ⚠️ Усі права захищено. Несанкціоноване копіювання чи відтворення контенту цього сайту, повністю або частково, суворо заборонено та може призвести до негайного застосування DMCA, включаючи блокування домену. Ми активно стежимо за дотриманням наших авторських прав.
+                </span>
+                        </div>
+                        <div class="flex-fill ml-auto text-right w-100"><span>Зроблено з розумом!</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- success message -->
+    <div id="msg-overlay"></div>
+    <div id="success-msg-container">
+        <div id="success-msg">
+            <div class="msg-inner">
+                <div class="likeh1">Дякую за заявку!
+                    <div class="fc-wrap"><span><img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="https://brainlab.com.ua/wp-content/themes/brainlab/images/face.png"
+                                                    class="face"><noscript><img src="https://brainlab.com.ua/wp-content/themes/brainlab/images/face.png"
+                                                    class="face"></noscript>
+            <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="https://brainlab.com.ua/wp-content/themes/brainlab/images/unicorn.png" class="unicorne"><noscript><img src="https://brainlab.com.ua/wp-content/themes/brainlab/images/unicorn.png" class="unicorne"></noscript></span>
+                        <span><img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="https://brainlab.com.ua/wp-content/themes/brainlab/images/face.png" class="face"><noscript><img src="https://brainlab.com.ua/wp-content/themes/brainlab/images/face.png" class="face"></noscript> <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="https://brainlab.com.ua/wp-content/themes/brainlab/images/unicorn.png"
+                                    class="unicorne"><noscript><img
+                                    src="https://brainlab.com.ua/wp-content/themes/brainlab/images/unicorn.png"
+                                    class="unicorne"></noscript></span>
+                        <span><img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="https://brainlab.com.ua/wp-content/themes/brainlab/images/face.png" class="face"><noscript><img src="https://brainlab.com.ua/wp-content/themes/brainlab/images/face.png" class="face"></noscript> <img data-lazyloaded="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="https://brainlab.com.ua/wp-content/themes/brainlab/images/unicorn.png"
+                                    class="unicorne"><noscript><img
+                                    src="https://brainlab.com.ua/wp-content/themes/brainlab/images/unicorn.png"
+                                    class="unicorne"></noscript></span></div>
+                </div>
+                <p>Наші менеджери зв'яжуться з вами найближчим часом.</p>
+                <button class="btn close-btn-msg"><span>Закрити</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- success message -->
+    <div id="error-msg-container">
+        <div id="error-msg">
+            <div class="msg-inner">
+                <div class="likeh1">Помилка під час відправлення!
+                </div>
+                <button class="btn close-btn-msg"><span>Закрити</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title" id="exampleModalLabel">Залишити заявку</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="submit-calcajax"></div>
+                    <form class="calc-form" novalidate="">
+
+
+                        <!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->
+
+
+                        <div class="form-group">
+
+
+                            <input type="text" value="" size="16" name="form[namem]" id="namem" class="form-control"
+                                   required>
+                            <label for="namem"><span>Ваше ім'я *</span></label>
+                            <div class="invalid-feedback">Заповніть ім'я</div>
+
+                        </div>
+                        <div class="form-group">
+
+
+                            <input type="text" value="" size="16" name="form[telm]" id="telm" class="form-control empty"
+                                   maxlength="17" pattern="\+[0-9]{2} [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+                            <label for="telm"><span>Ваш телефон *</span></label>
+                            <div class="invalid-feedback">Заповніть телефон</div>
+                        </div>
+                        <div class="form-group">
+
+
+                            <input type="text" value="" size="16" name="form[emailm]" id="emailm" class="form-control"
+                                   required>
+                            <label for="emailm"><span>Ваш email *</span></label>
+                            <div class="invalid-feedback foremail">Заповніть email</div>
+                        </div>
+                        <div class="form-group">
+
+
+                            <input type="text" value="" size="16" name="form[aboutProjectm]" id="aboutProjectm"
+                                   class="form-control"
+                                   required>
+                            <label for="aboutProjectm"><span>Коротко про ваш проект</span></label>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="btn-wrap">
+                                <button class="btn btn-blue btn-block submit-calc-btn" type="submit">
+                                    <span>Надіслати</span></button>
+                            </div>
+
+                        </div>
+
+
+                        <input type="hidden" name="form[ts_field]" id="ts_field" value="Не вибрано">
+                        <input type="hidden" name="form[dz_field]" id="dz_field" value="Не вибрано">
+                        <input type="hidden" name="form[ver_field]" id="ver_field" value="Не вибрано">
+                        <input type="hidden" name="form[cms_field]" id="cms_field" value="Не вибрано">
+                        <input type="hidden" name="form[price_field]" id="price_field" value="0">
+                        <input type="hidden" name="form[days_field]" id="days_field" value="0">
+                        <input type="hidden" name="form[page_id_field]" id="page_id_field"
+                               value="6452">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modal-form2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title" id="exampleModalLabel">Залишити заявку</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="submit-portfolio"></div>
+                    <form class="portfolio-form" novalidate="">
+
+
+                        <!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->
+
+
+                        <div class="form-group">
+
+
+                            <input type="text" value="" size="16" name="form[namep]" id="namep" class="form-control"
+                                   required>
+                            <label for="namep"><span>Ваше ім'я *</span></label>
+                            <div class="invalid-feedback">Заповніть ім'я</div>
+
+                        </div>
+                        <div class="form-group">
+
+
+                            <input type="text" value="" size="16" name="form[telp]" id="telp" class="form-control empty"
+                                   maxlength="17">
+                            <label for="telp"><span>Ваш телефон</span></label>
+                            <div class="invalid-feedback">Заповніть телефон</div>
+                        </div>
+                        <div class="form-group">
+
+
+                            <input type="text" value="" size="16" name="form[emailp]" id="emailp" class="form-control"
+                                   required>
+                            <label for="emailp"><span>Ваш email *</span></label>
+                            <div class="invalid-feedback foremail">Заповніть email</div>
+                        </div>
+                        <div class="form-group">
+
+                            <input type="text" value="" size="16" name="form[aboutProjectp]" id="aboutProjectp"
+                                   class="form-control"
+                                   required>
+                            <label for="aboutProjectp"><span>Коротко про ваш проект</span></label>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-select custom-select-short">
+                                <select name="form[budget]" id="budgetp">
+                                    <option value="default">Бюджет</option>
+                                    <option value="less-10k">< $10K</option>
+                                    <option value="10k-30k">$10K-30K</option>
+                                    <option value="more-30k">> $30K</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="btn-wrap">
+                                <button class="btn btn-blue btn-block submit-port-btn" type="submit">
+                                    <span>Надіслати</span></button>
+                            </div>
+
+                        </div>
+
+
+                        <input type="hidden" name="p_title" id="p_title" value="Gant">
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<!-- !!! -->
+
+    <div class="modal fade" id="modal-leave" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Шукаєте надійних розробників? <br>У нас є для вас пропозиція!</div>
+                    <div class="subtitle">
+                        Залишайте заявку та обговоримо ваш проект.
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="leave-form" novalidate="">
+                        <div class="left-col">
+                            <div class="form-group">
+                                <input type="text" value="" size="16" name="form[name_leave]" id="name_leave"
+                                       class="form-control" required>
+                                <label for="name_leave">
+                                    <span>Ваше ім'я</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" value="" size="16" name="form[tel_leave]" id="tel_leave"
+                                       class="form-control empty" maxlength="17"
+                                       pattern="\+[0-9]{2} [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+                                <label for="tel_leave">
+                                    <span>Ваш телефон *</span>
+                                </label>
+                                <div class="invalid-feedback">Заповніть телефон</div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" value="" size="16" name="form[email_leave]" id="email_leave"
+                                       class="form-control" required>
+                                <label for="email_leave">
+                                    <span>Ваш email *</span>
+                                </label>
+                                <div class="invalid-feedback for-leave-email">Заповніть email</div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-select custom-select-short">
+                                    <select name="form[budget_leave]" id="budget_leave">
+                                        <option value="default">Бюджет</option>
+                                        <option value="less-10k">менше $10K</option>
+                                        <option value="10k-30k">$10K-30K</option>
+                                        <option value="more-30k">більше $30K</option>
+                                        <option value="need-estimate">потрібен прорахунок</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-col">
+                            <div class="form-group form-group-textarea">
+                                <textarea value="" size="16" name="form[about_leave]" id="about_leave"
+                                          class="form-control" required></textarea>
+                                <label for="about_leave">
+                                    <span>Коротко про ваш проект</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="g-recaptcha-container" id="leaveRecaptchaContainer">
+                            <div id="modalLeaveCaptcha"></div>
+                        </div>
+                        <div class="btn-wrap">
+                            <button class="btn btn-blue btn-block submit-leave-btn" type="submit">
+                                <span>Надіслати</span>
+                            </button>
+                        </div>
+                        <input type="hidden" id="page_leave_id" value="6452">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal modal-language fade" id="modal-language" tabindex="-1" role="dialog"
+    aria-hidden="true">
+  <div class="modal-dialog modal-language__dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">
+          Please choose language
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body modal-language__body">
+        <div class="modal-language__btns">
+          <div class="btn btn-blue btn-block modal-language__btn js-modal-language-btn" data-value="uk" data-link="https://brainlab.com.ua/uk/stvorennya-sajtu-u-lvovi">
+            <span>Ukrainian</span>
+          </div>
+          <div class="btn btn-blue btn-block modal-language__btn js-modal-language-btn" data-value="en" data-link="https://brainlab.com.ua/uk/glavnaya">
+            <span>English</span>
+          </div>
+          <div class="btn btn-blue btn-block modal-language__btn js-modal-language-btn" data-value="ru" data-link="https://brainlab.com.ua/sozdanie-sajta-vo-lvove">
+            <span>Russian</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- main-modal-form -->
+    <div class="modal fade main-modal-form" id="main-modal-form-request_and_project" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">
+	                    Розробляємо IT-рішення з гарантією результата.                    </div>
+                    <div class="subtitle">
+						Залиште заявку, щоб отримати детальну та прозору комерційну пропозицію.                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="leave-form main-modal-form-ajax" data-key="request_and_project" novalidate="">
+                        <div class="left-col">
+                            <div class="form-group">
+                                <input type="text" value="" size="16" name="name_main_form" id="name_main_form" class="form-control" required>
+                                <label for="name_main_form">
+                                <span>
+                                    Ваше ім'я                                </span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" value="" size="16" name="tel_main_form" id="tel_main_form-request_and_project"
+                                       class="form-control empty"
+                                       maxlength="12" required>
+                                <label for="tel_main_form-request_and_project">
+                                </label>
+                                <div class="invalid-feedback">
+									Заповніть телефон                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" value="" size="16" name="email_main_form" id="email_main_form" class="form-control" required>
+                                <label for="email_main_form">
+                                <span>
+                                    Ваш email *                                </span>
+                                </label>
+                                <div class="invalid-feedback">
+									Заповніть email                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-select custom-select-short">
+                                    <select name="budget_main_form" id="budget_main_form">
+                                        <option value="default">Бюджет *</option>
+                                        <option value="less-10k">
+	                                        менше $10K                                        </option>
+                                        <option value="10k-30k">$10K-30K</option>
+                                        <option value="more-30k">
+	                                        більше $30K                                        </option>
+                                        <option value="need-estimate">
+											потрібен прорахунок                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-col">
+                            <div class="form-group form-group-textarea">
+                                <textarea value="" required size="16" name="about_main_form" id="about_main_form" class="form-control"></textarea>
+                                <label for="about_main_form">
+                                <span>
+                                    Коротко про ваш проект                                </span>
+                                </label>
+                            </div>
+                        </div>
+                        <input type="text" style="display: none;" name="main_form_for_bot">
+                        <div class="g-recaptcha-container" id="request_and_project_RecaptchaContainer">
+                            <div id="request_and_project_Captcha"
+                            ></div>
+                        </div>
+                        <div class="btn-wrap">
+                            <button class="btn btn-blue btn-block submit-main_form-btn" type="submit">
+                            <span>
+                                Відправити                            </span>
+                            </button>
+                        </div>
+                        <input type="hidden" name="page_main_form_id" id="page_main_form_id" value="6452">
+                        <input type="hidden" name="main_form_event" id="main_form_event" value="Замовити проєкт">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main-modal-form -->
+    <div class="modal fade main-modal-form" id="main-modal-form-portfolio" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">
+	                    Довірте розробку вашого проєкту нам!                    </div>
+                    <div class="subtitle">
+						Залиште заявку, щоб отримати детальну та прозору комерційну пропозицію.                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="leave-form main-modal-form-ajax" data-key="portfolio" novalidate="">
+                        <div class="left-col">
+                            <div class="form-group">
+                                <input type="text" value="" size="16" name="name_main_form" id="name_main_form" class="form-control" required>
+                                <label for="name_main_form">
+                                <span>
+                                    Ваше ім'я                                </span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" value="" size="16" name="tel_main_form" id="tel_main_form-portfolio"
+                                       class="form-control empty"
+                                       maxlength="12" required>
+                                <label for="tel_main_form-portfolio">
+                                </label>
+                                <div class="invalid-feedback">
+									Заповніть телефон                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" value="" size="16" name="email_main_form" id="email_main_form" class="form-control" required>
+                                <label for="email_main_form">
+                                <span>
+                                    Ваш email *                                </span>
+                                </label>
+                                <div class="invalid-feedback">
+									Заповніть email                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-select custom-select-short">
+                                    <select name="budget_main_form" id="budget_main_form">
+                                        <option value="default">Бюджет *</option>
+                                        <option value="less-10k">
+	                                        менше $10K                                        </option>
+                                        <option value="10k-30k">$10K-30K</option>
+                                        <option value="more-30k">
+	                                        більше $30K                                        </option>
+                                        <option value="need-estimate">
+											потрібен прорахунок                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-col">
+                            <div class="form-group form-group-textarea">
+                                <textarea value="" required size="16" name="about_main_form" id="about_main_form" class="form-control"></textarea>
+                                <label for="about_main_form">
+                                <span>
+                                    Коротко про ваш проект                                </span>
+                                </label>
+                            </div>
+                        </div>
+                        <input type="text" style="display: none;" name="main_form_for_bot">
+                        <div class="g-recaptcha-container" id="portfolio_RecaptchaContainer">
+                            <div id="portfolio_Captcha"
+                            ></div>
+                        </div>
+                        <div class="btn-wrap">
+                            <button class="btn btn-blue btn-block submit-main_form-btn" type="submit">
+                            <span>
+                                Відправити                            </span>
+                            </button>
+                        </div>
+                        <input type="hidden" name="page_main_form_id" id="page_main_form_id" value="6452">
+                        <input type="hidden" name="main_form_event" id="main_form_event" value="Замовити cхожий проєкт">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main-modal-form -->
+    <div class="modal fade main-modal-form" id="main-modal-form-header_call_back" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">
+	                    Замовити зворотній дзвінок.                    </div>
+                    <div class="subtitle">
+						Залиште заявку, щоб отримати детальну та прозору комерційну пропозицію.                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="leave-form main-modal-form-ajax" data-key="header_call_back" novalidate="">
+                        <div class="left-col">
+                            <div class="form-group">
+                                <input type="text" value="" size="16" name="name_main_form" id="name_main_form" class="form-control" required>
+                                <label for="name_main_form">
+                                <span>
+                                    Ваше ім'я                                </span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" value="" size="16" name="tel_main_form" id="tel_main_form-header_call_back"
+                                       class="form-control empty"
+                                       maxlength="12" required>
+                                <label for="tel_main_form-header_call_back">
+                                </label>
+                                <div class="invalid-feedback">
+									Заповніть телефон                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" value="" size="16" name="email_main_form" id="email_main_form" class="form-control" required>
+                                <label for="email_main_form">
+                                <span>
+                                    Ваш email                                 </span>
+                                </label>
+                                <div class="invalid-feedback">
+									Заповніть email                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-select custom-select-short">
+                                    <select name="budget_main_form" id="budget_main_form">
+                                        <option value="default">Бюджет *</option>
+                                        <option value="less-10k">
+	                                        менше $10K                                        </option>
+                                        <option value="10k-30k">$10K-30K</option>
+                                        <option value="more-30k">
+	                                        більше $30K                                        </option>
+                                        <option value="need-estimate">
+											потрібен прорахунок                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-col">
+                            <div class="form-group form-group-textarea">
+                                <textarea value="" required size="16" name="about_main_form" id="about_main_form" class="form-control"></textarea>
+                                <label for="about_main_form">
+                                <span>
+                                    Коротко про ваш проект                                </span>
+                                </label>
+                            </div>
+                        </div>
+                        <input type="text" style="display: none;" name="main_form_for_bot">
+                        <div class="g-recaptcha-container" id="header_call_back_RecaptchaContainer">
+                            <div id="header_call_back_Captcha"
+                            ></div>
+                        </div>
+                        <div class="btn-wrap">
+                            <button class="btn btn-blue btn-block submit-main_form-btn" type="submit">
+                            <span>
+                                Відправити                            </span>
+                            </button>
+                        </div>
+                        <input type="hidden" name="page_main_form_id" id="page_main_form_id" value="6452">
+                        <input type="hidden" name="main_form_event" id="main_form_event" value="Замовити дзвінок">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="curnt_lng" style="opacity:0; display:none">UK</div>
+<div id="to-top" style="display: none;">
+    <i class="ico ico-arrow-up"></i>
+</div>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/brainlab/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="kk-star-ratings-js-extra">
+var kk_star_ratings = {"action":"kk-star-ratings","endpoint":"https://brainlab.com.ua/wp-admin/admin-ajax.php","nonce":"09beb359f1"};
+//# sourceURL=kk-star-ratings-js-extra
+</script>
+
+<script id="wp-postviews-cache-js-extra">
+var viewsCacheL10n = {"admin_ajax_url":"https://brainlab.com.ua/wp-admin/admin-ajax.php","nonce":"505c90241a","post_id":"6452"};
+//# sourceURL=wp-postviews-cache-js-extra
+</script>
+
+<script id="pll_cookie_script-js-after">
+(function() {
+				var expirationDate = new Date();
+				expirationDate.setTime( expirationDate.getTime() + 31536000 * 1000 );
+				document.cookie = "pll_language=uk; expires=" + expirationDate.toUTCString() + "; path=/; secure; SameSite=Lax";
+			}());
+
+//# sourceURL=pll_cookie_script-js-after
+</script>
+<script id="intlTelInput-js-js" src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js?ver=20250715"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    (function (d, w, s) {
+        var widgetHash = '0ouhrduj4ww3j05rvt4x', ctw = d.createElement(s);
+        ctw.type = 'text/javascript';
+        ctw.async = true;
+        ctw.src = '//widgets.binotel.com/calltracking/widgets/' + widgetHash + '.js';
+        var sn = d.getElementsByTagName(s)[0];
+        sn.parentNode.insertBefore(ctw, sn);
+    })(document, window, 'script');
+</script>
+
+
+
+    <div class="brainlab-cookie-banner">
+        Цей сайт використовує cookie-файли для більш комфортної роботи користувача. Продовжуючи переглядати сайт, Ви
+        погоджуєтеся на використання cookie.
+        <button type="button" class="brainlab-cookie-banner--button">
+            OK
+        </button>
+    </div>
+
+
+
+
+
+<script data-no-optimize="1">window.lazyLoadOptions=Object.assign({},{threshold:300},window.lazyLoadOptions||{});!function(t,e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):(t="undefined"!=typeof globalThis?globalThis:t||self).LazyLoad=e()}(this,function(){"use strict";function e(){return(e=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var n,a=arguments[e];for(n in a)Object.prototype.hasOwnProperty.call(a,n)&&(t[n]=a[n])}return t}).apply(this,arguments)}function o(t){return e({},at,t)}function l(t,e){return t.getAttribute(gt+e)}function c(t){return l(t,vt)}function s(t,e){return function(t,e,n){e=gt+e;null!==n?t.setAttribute(e,n):t.removeAttribute(e)}(t,vt,e)}function i(t){return s(t,null),0}function r(t){return null===c(t)}function u(t){return c(t)===_t}function d(t,e,n,a){t&&(void 0===a?void 0===n?t(e):t(e,n):t(e,n,a))}function f(t,e){et?t.classList.add(e):t.className+=(t.className?" ":"")+e}function _(t,e){et?t.classList.remove(e):t.className=t.className.replace(new RegExp("(^|\\s+)"+e+"(\\s+|$)")," ").replace(/^\s+/,"").replace(/\s+$/,"")}function g(t){return t.llTempImage}function v(t,e){!e||(e=e._observer)&&e.unobserve(t)}function b(t,e){t&&(t.loadingCount+=e)}function p(t,e){t&&(t.toLoadCount=e)}function n(t){for(var e,n=[],a=0;e=t.children[a];a+=1)"SOURCE"===e.tagName&&n.push(e);return n}function h(t,e){(t=t.parentNode)&&"PICTURE"===t.tagName&&n(t).forEach(e)}function a(t,e){n(t).forEach(e)}function m(t){return!!t[lt]}function E(t){return t[lt]}function I(t){return delete t[lt]}function y(e,t){var n;m(e)||(n={},t.forEach(function(t){n[t]=e.getAttribute(t)}),e[lt]=n)}function L(a,t){var o;m(a)&&(o=E(a),t.forEach(function(t){var e,n;e=a,(t=o[n=t])?e.setAttribute(n,t):e.removeAttribute(n)}))}function k(t,e,n){f(t,e.class_loading),s(t,st),n&&(b(n,1),d(e.callback_loading,t,n))}function A(t,e,n){n&&t.setAttribute(e,n)}function O(t,e){A(t,rt,l(t,e.data_sizes)),A(t,it,l(t,e.data_srcset)),A(t,ot,l(t,e.data_src))}function w(t,e,n){var a=l(t,e.data_bg_multi),o=l(t,e.data_bg_multi_hidpi);(a=nt&&o?o:a)&&(t.style.backgroundImage=a,n=n,f(t=t,(e=e).class_applied),s(t,dt),n&&(e.unobserve_completed&&v(t,e),d(e.callback_applied,t,n)))}function x(t,e){!e||0<e.loadingCount||0<e.toLoadCount||d(t.callback_finish,e)}function M(t,e,n){t.addEventListener(e,n),t.llEvLisnrs[e]=n}function N(t){return!!t.llEvLisnrs}function z(t){if(N(t)){var e,n,a=t.llEvLisnrs;for(e in a){var o=a[e];n=e,o=o,t.removeEventListener(n,o)}delete t.llEvLisnrs}}function C(t,e,n){var a;delete t.llTempImage,b(n,-1),(a=n)&&--a.toLoadCount,_(t,e.class_loading),e.unobserve_completed&&v(t,n)}function R(i,r,c){var l=g(i)||i;N(l)||function(t,e,n){N(t)||(t.llEvLisnrs={});var a="VIDEO"===t.tagName?"loadeddata":"load";M(t,a,e),M(t,"error",n)}(l,function(t){var e,n,a,o;n=r,a=c,o=u(e=i),C(e,n,a),f(e,n.class_loaded),s(e,ut),d(n.callback_loaded,e,a),o||x(n,a),z(l)},function(t){var e,n,a,o;n=r,a=c,o=u(e=i),C(e,n,a),f(e,n.class_error),s(e,ft),d(n.callback_error,e,a),o||x(n,a),z(l)})}function T(t,e,n){var a,o,i,r,c;t.llTempImage=document.createElement("IMG"),R(t,e,n),m(c=t)||(c[lt]={backgroundImage:c.style.backgroundImage}),i=n,r=l(a=t,(o=e).data_bg),c=l(a,o.data_bg_hidpi),(r=nt&&c?c:r)&&(a.style.backgroundImage='url("'.concat(r,'")'),g(a).setAttribute(ot,r),k(a,o,i)),w(t,e,n)}function G(t,e,n){var a;R(t,e,n),a=e,e=n,(t=Et[(n=t).tagName])&&(t(n,a),k(n,a,e))}function D(t,e,n){var a;a=t,(-1<It.indexOf(a.tagName)?G:T)(t,e,n)}function S(t,e,n){var a;t.setAttribute("loading","lazy"),R(t,e,n),a=e,(e=Et[(n=t).tagName])&&e(n,a),s(t,_t)}function V(t){t.removeAttribute(ot),t.removeAttribute(it),t.removeAttribute(rt)}function j(t){h(t,function(t){L(t,mt)}),L(t,mt)}function F(t){var e;(e=yt[t.tagName])?e(t):m(e=t)&&(t=E(e),e.style.backgroundImage=t.backgroundImage)}function P(t,e){var n;F(t),n=e,r(e=t)||u(e)||(_(e,n.class_entered),_(e,n.class_exited),_(e,n.class_applied),_(e,n.class_loading),_(e,n.class_loaded),_(e,n.class_error)),i(t),I(t)}function U(t,e,n,a){var o;n.cancel_on_exit&&(c(t)!==st||"IMG"===t.tagName&&(z(t),h(o=t,function(t){V(t)}),V(o),j(t),_(t,n.class_loading),b(a,-1),i(t),d(n.callback_cancel,t,e,a)))}function $(t,e,n,a){var o,i,r=(i=t,0<=bt.indexOf(c(i)));s(t,"entered"),f(t,n.class_entered),_(t,n.class_exited),o=t,i=a,n.unobserve_entered&&v(o,i),d(n.callback_enter,t,e,a),r||D(t,n,a)}function q(t){return t.use_native&&"loading"in HTMLImageElement.prototype}function H(t,o,i){t.forEach(function(t){return(a=t).isIntersecting||0<a.intersectionRatio?$(t.target,t,o,i):(e=t.target,n=t,a=o,t=i,void(r(e)||(f(e,a.class_exited),U(e,n,a,t),d(a.callback_exit,e,n,t))));var e,n,a})}function B(e,n){var t;tt&&!q(e)&&(n._observer=new IntersectionObserver(function(t){H(t,e,n)},{root:(t=e).container===document?null:t.container,rootMargin:t.thresholds||t.threshold+"px"}))}function J(t){return Array.prototype.slice.call(t)}function K(t){return t.container.querySelectorAll(t.elements_selector)}function Q(t){return c(t)===ft}function W(t,e){return e=t||K(e),J(e).filter(r)}function X(e,t){var n;(n=K(e),J(n).filter(Q)).forEach(function(t){_(t,e.class_error),i(t)}),t.update()}function t(t,e){var n,a,t=o(t);this._settings=t,this.loadingCount=0,B(t,this),n=t,a=this,Y&&window.addEventListener("online",function(){X(n,a)}),this.update(e)}var Y="undefined"!=typeof window,Z=Y&&!("onscroll"in window)||"undefined"!=typeof navigator&&/(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),tt=Y&&"IntersectionObserver"in window,et=Y&&"classList"in document.createElement("p"),nt=Y&&1<window.devicePixelRatio,at={elements_selector:".lazy",container:Z||Y?document:null,threshold:300,thresholds:null,data_src:"src",data_srcset:"srcset",data_sizes:"sizes",data_bg:"bg",data_bg_hidpi:"bg-hidpi",data_bg_multi:"bg-multi",data_bg_multi_hidpi:"bg-multi-hidpi",data_poster:"poster",class_applied:"applied",class_loading:"litespeed-loading",class_loaded:"litespeed-loaded",class_error:"error",class_entered:"entered",class_exited:"exited",unobserve_completed:!0,unobserve_entered:!1,cancel_on_exit:!0,callback_enter:null,callback_exit:null,callback_applied:null,callback_loading:null,callback_loaded:null,callback_error:null,callback_finish:null,callback_cancel:null,use_native:!1},ot="src",it="srcset",rt="sizes",ct="poster",lt="llOriginalAttrs",st="loading",ut="loaded",dt="applied",ft="error",_t="native",gt="data-",vt="ll-status",bt=[st,ut,dt,ft],pt=[ot],ht=[ot,ct],mt=[ot,it,rt],Et={IMG:function(t,e){h(t,function(t){y(t,mt),O(t,e)}),y(t,mt),O(t,e)},IFRAME:function(t,e){y(t,pt),A(t,ot,l(t,e.data_src))},VIDEO:function(t,e){a(t,function(t){y(t,pt),A(t,ot,l(t,e.data_src))}),y(t,ht),A(t,ct,l(t,e.data_poster)),A(t,ot,l(t,e.data_src)),t.load()}},It=["IMG","IFRAME","VIDEO"],yt={IMG:j,IFRAME:function(t){L(t,pt)},VIDEO:function(t){a(t,function(t){L(t,pt)}),L(t,ht),t.load()}},Lt=["IMG","IFRAME","VIDEO"];return t.prototype={update:function(t){var e,n,a,o=this._settings,i=W(t,o);{if(p(this,i.length),!Z&&tt)return q(o)?(e=o,n=this,i.forEach(function(t){-1!==Lt.indexOf(t.tagName)&&S(t,e,n)}),void p(n,0)):(t=this._observer,o=i,t.disconnect(),a=t,void o.forEach(function(t){a.observe(t)}));this.loadAll(i)}},destroy:function(){this._observer&&this._observer.disconnect(),K(this._settings).forEach(function(t){I(t)}),delete this._observer,delete this._settings,delete this.loadingCount,delete this.toLoadCount},loadAll:function(t){var e=this,n=this._settings;W(t,n).forEach(function(t){v(t,e),D(t,n,e)})},restoreAll:function(){var e=this._settings;K(e).forEach(function(t){P(t,e)})}},t.load=function(t,e){e=o(e);D(t,e)},t.resetStatus=function(t){i(t)},t}),function(t,e){"use strict";function n(){e.body.classList.add("litespeed_lazyloaded")}function a(){console.log("[LiteSpeed] Start Lazy Load"),o=new LazyLoad(Object.assign({},t.lazyLoadOptions||{},{elements_selector:"[data-lazyloaded]",callback_finish:n})),i=function(){o.update()},t.MutationObserver&&new MutationObserver(i).observe(e.documentElement,{childList:!0,subtree:!0,attributes:!0})}var o,i;t.addEventListener?t.addEventListener("load",a,!1):t.attachEvent("onload",a)}(window,document);</script><script data-optimized="1" src="https://brainlab.com.ua/wp-content/litespeed/js/49eefd00c16c917cbca6388d0e798f9b.js?ver=1177b"></script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"2787a64d0342459ab09225b5d28912ec","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+<!-- Page supported by LiteSpeed Cache 7.8.1 on 2026-08-17 21:57:37 -->

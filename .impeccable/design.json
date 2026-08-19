@@ -1,0 +1,120 @@
+{
+  "$schema": "impeccable/design-sidecar@1",
+  "northStar": "Схема маршруту — механізм студії (відсутність передач між людьми) є топологією, тому інтерфейс говорить мовою транспортної схеми: лінії, вузли, легенда, виноски.",
+  "seed": "4aab6a65",
+  "form": "схема маршруту (кандидат 6 з упорядкованого списку)",
+  "mode": "persuade",
+  "antiReference": {
+    "source": "research/26-anti-slop-brief.md",
+    "binding": true,
+    "forbids": [
+      "контейнер 1200px строго по центру як єдина міра",
+      "сітки однакових карток",
+      "структура Hero → Features → Testimonials → CTA",
+      "однакові заокруглення, градієнти, скло",
+      "готові UI-набори (Tailwind UI, shadcn/ui)",
+      "кікер/надзаголовок над заголовком"
+    ],
+    "note": "Tailwind CSS використовується як утилітарний шар, але його дефолтна шкала навмисно перевизначена в @theme. Повернення rounded-lg / shadow-md / max-w-7xl / container ламає систему."
+  },
+  "colorRamps": {
+    "route": {
+      "deep": "#2a1245",
+      "base": "#5b21b6",
+      "bright": "#7c3aed",
+      "pale": "#ded3f2",
+      "strategy": "committed — один насичений колір несе великі площини, включно з full-bleed екраном"
+    },
+    "surface": {
+      "paper": "#f6f6f4",
+      "paper-deep": "#eceae6",
+      "note": "прохолодний папір; крем свідомо відкинутий як дефолт AI-рендеру"
+    },
+    "detour": {
+      "line": "#a9a4b8",
+      "text": "#635e73",
+      "rule": "line — тільки графіка; текст ніколи не фарбується в line, бо не тримає 4,5:1"
+    }
+  },
+  "elevation": {
+    "philosophy": "flat",
+    "shadows": "none",
+    "depthSources": ["тональний шар paper → paper-deep → route-deep", "лінія 1–3px", "повна інверсія екрана в route-deep"]
+  },
+  "motion": {
+    "gate": "@media (prefers-reduced-motion: no-preference)",
+    "principle": "геометрія SVG повна в розмітці; рух лише додається зверху",
+    "tokens": {
+      "draw-route": "0.6s cubic-bezier(0.16, 1, 0.3, 1)",
+      "node-in": "0.3s cubic-bezier(0.16, 1, 0.3, 1)",
+      "node-stagger": "0.3 + i * 0.04s",
+      "grow-line-mobile": "1s cubic-bezier(0.16, 1, 0.3, 1)"
+    },
+    "verified": "з reduced-motion: stroke-dashoffset 0, 7/7 вузлів видимі, animation-name none"
+  },
+  "breakpoints": {
+    "sm": "40rem",
+    "md": "48rem — тут горизонтальна схема змінюється вертикальною",
+    "lg": "64rem — тут вмикається зміщена колонка"
+  },
+  "focusRing": {
+    "css": ":where(a, button, input, textarea, select, summary, [tabindex]):focus-visible { outline: 2px solid var(--color-route); outline-offset: 3px; border-radius: 2px; }",
+    "rule": "частина візуальної мови, знімати заборонено"
+  },
+  "namedDevices": [
+    {
+      "id": "route-compare",
+      "name": "Порівняння двох маршрутів",
+      "file": "src/components/RouteCompare.astro",
+      "role": "заявляє пропозицію",
+      "spec": "угорі пряма лінія route 6px із вузлами-днями; під нею бліда пунктирна detour з вузлами-передачами; на <md розвертається вертикально"
+    },
+    {
+      "id": "handoff-chain",
+      "name": "Ланцюг передач",
+      "file": "src/pages/index.astro",
+      "role": "заявляє ціну",
+      "spec": "ролі з line-through decoration-route-bright спускаються пунктирним ланцюгом і сходяться в один залитий вузол"
+    },
+    {
+      "id": "route-rule",
+      "name": "Правило маршруту",
+      "file": "src/pages/index.astro",
+      "role": "заявляє обсяг",
+      "spec": "вертикальна лінія bg-route/25 3px зі станціями 17px, несе нумерований список; замінює сітку карток"
+    },
+    {
+      "id": "legend-as-price",
+      "name": "Легенда-як-ціна",
+      "file": "src/pages/index.astro",
+      "role": "заявляє гроші як нотацію",
+      "spec": "рядки легенди: гліф вузла, назва, обсяг і строк у нотації, ціна кольором route; стоїть на border-t-2 border-route"
+    }
+  ],
+  "qualityFloor": {
+    "contrastFailures": 0,
+    "focusVisibleOnAllTabStops": true,
+    "touchTargetsMin": "44px (кнопки 52px)",
+    "landmarks": "рівно один header / main / footer, один h1",
+    "lcpMs": 72,
+    "requests": 4,
+    "distKb": 164,
+    "fontsKb": 82,
+    "mobileViewports": 6.8,
+    "horizontalOverflow": false,
+    "benchmark": "жоден з 11 досліджених конкурентів не проходить цей набір; 9 з 11 провалюють контраст, 7 з 11 зняли фокус"
+  },
+  "stack": {
+    "framework": "Astro 5",
+    "css": "Tailwind CSS 4 (CSS-first @theme)",
+    "hosting": "GitHub Pages, статика",
+    "fonts": "self-hosted woff2 subsets: Geologica, JetBrains Mono",
+    "repoNote": "репозиторій має називатись yonkaagency.github.io, щоб сайт жив у корені й переїзд на власний домен не ламав внутрішні посилання"
+  },
+  "undecided": [
+    "сторінки послуг /poslugy/* — не збудовані",
+    "картка концепту /roboty/<slug>/ — ключова сторінка за спекою, візуальні правила не задані",
+    "російська версія — підтверджена як потрібна, не збудована; перемикач і ru hreflang тимчасово прибрані",
+    "стани форми (валідація, помилка, успіх) — форми ще немає, контакт іде через tel: і Telegram"
+  ]
+}

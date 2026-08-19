@@ -1,0 +1,110 @@
+---
+// Сигнатурна графіка: два маршрути до запущеного сайту.
+// Спершу мій маршрут (це корисне навантаження), під ним — бліда схема агенції.
+// SVG повний у розмітці; анімація лише додає прокреслювання там, де рух дозволено.
+const days = [
+  { x: 40,  d: '1',   label: 'бриф',      from: '20–30 хв розмови' },
+  { x: 194, d: '2',   label: 'структура', from: '' },
+  { x: 348, d: '3–4', label: 'дизайн',    from: 'погодити напрямок' },
+  { x: 502, d: '5',   label: 'код',       from: '' },
+  { x: 656, d: '6',   label: 'SEO',       from: 'доступи до домену' },
+  { x: 810, d: '7',   label: 'запуск',    from: 'прийняти роботу' },
+];
+
+const detour = [
+  { x: 40,  y: 64, label: 'бриф',         side: 'up' },
+  { x: 172, y: 64, label: 'менеджер',     side: 'up' },
+  { x: 304, y: 100, label: 'дизайнер',    side: 'down' },
+  { x: 436, y: 64, label: 'правки',       side: 'up' },
+  { x: 568, y: 100, label: 'верстальник', side: 'down' },
+  { x: 700, y: 64, label: 'SEO',          side: 'up' },
+  { x: 832, y: 100, label: 'менеджер',    side: 'down' },
+  { x: 960, y: 100, label: 'запуск',      side: 'down' },
+];
+const detourPath = detour.map((n, i) => `${i === 0 ? 'M' : 'L'}${n.x} ${n.y}`).join(' ');
+---
+
+<figure class="mt-12 sm:mt-16">
+  <figcaption class="sr-only">
+    Порівняння двох шляхів до запущеного сайту: напряму з одним виконавцем за сім днів,
+    і через агенцію з шістьма передачами між людьми за 3–6 тижнів.
+  </figcaption>
+
+  <!-- Десктоп -->
+  <svg viewBox="-46 0 1092 310" class="hidden w-full h-auto md:block" role="img"
+       aria-label="Схема: прямий маршрут за сім днів проти маршруту через агенцію з шістьма передачами">
+
+    <!-- Мій маршрут — угорі, це головне -->
+    <text x="40" y="26" class="fill-[var(--color-route)] [font-family:var(--font-note)] text-[13px] tracking-[0.09em] font-semibold">
+      НАПРЯМУ · 7 ДНІВ · ОДИН ВИКОНАВЕЦЬ
+    </text>
+    <path d="M40 74 L960 74" fill="none" stroke="var(--color-route)" stroke-width="6"
+          stroke-linecap="round" class="route-draw" style="--len: 920" />
+    {days.map((n, i) => (
+      <g class="route-node" style={`animation-delay:${0.3 + i * 0.04}s`}>
+        <circle cx={n.x} cy="74" r="9" fill="var(--color-paper)" stroke="var(--color-route)" stroke-width="4" />
+        <text x={n.x} y="52" text-anchor="middle"
+              class="fill-[var(--color-route)] [font-family:var(--font-note)] text-[12px] font-semibold">{n.d}</text>
+        <text x={n.x} y="101" text-anchor="middle"
+              class="fill-[var(--color-ink)] [font-family:var(--font-note)] text-[12px]">{n.label}</text>
+        {n.from && (
+          <text x={n.x} y="119" text-anchor="middle"
+                class="fill-[var(--color-ink-soft)] [font-family:var(--font-note)] text-[10.5px]">{n.from}</text>
+        )}
+      </g>
+    ))}
+    <circle cx="960" cy="74" r="13" fill="var(--color-route)" class="route-node" style="animation-delay:0.55s" />
+    <text x="960" y="101" text-anchor="end"
+          class="fill-[var(--color-route)] [font-family:var(--font-note)] text-[12px] font-semibold">сайт працює</text>
+
+    <!-- Маршрут агенції — нижче, як контраст -->
+    <text x="40" y="196" class="fill-[var(--color-ink-soft)] [font-family:var(--font-note)] text-[13px] tracking-[0.09em]">
+      ЧЕРЕЗ АГЕНЦІЮ · 3–6 ТИЖНІВ · 6 ПЕРЕДАЧ МІЖ ЛЮДЬМИ
+    </text>
+    <g transform="translate(0, 170)">
+      <path d={detourPath} fill="none" stroke="var(--color-detour)" stroke-width="2"
+            stroke-dasharray="7 6" stroke-linecap="round" stroke-linejoin="round" />
+      {detour.map((n) => (
+        <g>
+          <circle cx={n.x} cy={n.y} r="5.5" fill="var(--color-paper)" stroke="var(--color-detour)" stroke-width="2" />
+          <text x={n.x} y={n.side === 'up' ? n.y - 14 : n.y + 23} text-anchor="middle"
+                class="fill-[var(--color-detour-ink)] [font-family:var(--font-note)] text-[12px]">{n.label}</text>
+        </g>
+      ))}
+    </g>
+  </svg>
+
+  <!-- Мобільний: та сама схема вертикально -->
+  <div class="md:hidden">
+    <p class="notation !text-route">Напряму · 7 днів · один виконавець</p>
+    <ol class="relative mt-4 pl-7">
+      <span class="absolute left-[6px] top-3 bottom-3 w-[4px] rounded-full bg-route route-draw-mobile" aria-hidden="true"></span>
+      {days.map((n) => (
+        <li class="relative py-2">
+          <span class="absolute -left-7 top-[11px] h-[15px] w-[15px] rounded-full border-[4px] border-route bg-paper" aria-hidden="true"></span>
+          <span class="flex items-baseline gap-3">
+            <span class="notation !text-route w-9 shrink-0">{n.d}</span>
+            <span class="text-[1.0625rem] font-medium">{n.label}</span>
+          </span>
+          {n.from && <span class="ml-12 block notation">від вас: {n.from}</span>}
+        </li>
+      ))}
+      <li class="relative flex items-baseline gap-3 pt-2">
+        <span class="absolute -left-[30px] top-[9px] h-[19px] w-[19px] rounded-full bg-route" aria-hidden="true"></span>
+        <span class="notation w-9 shrink-0"></span>
+        <span class="text-[1.0625rem] font-semibold text-route">сайт працює</span>
+      </li>
+    </ol>
+
+    <p class="notation mt-10">Через агенцію · 3–6 тижнів · 6 передач між людьми</p>
+    <ol class="relative mt-4 pl-7">
+      <span class="absolute left-[5px] top-2 bottom-2 border-l-2 border-dashed border-detour" aria-hidden="true"></span>
+      {detour.slice(1, 7).map((n) => (
+        <li class="relative py-[7px] text-[0.9375rem] text-detour-ink">
+          <span class="absolute -left-7 top-[13px] h-[11px] w-[11px] rounded-full border-2 border-detour bg-paper" aria-hidden="true"></span>
+          {n.label}
+        </li>
+      ))}
+    </ol>
+  </div>
+</figure>

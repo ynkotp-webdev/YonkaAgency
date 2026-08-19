@@ -1,0 +1,217 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const works = await getCollection('roboty');
+  return works.map((w) => ({ params: { id: w.id }, props: { work: w } }));
+}
+
+const { work } = Astro.props;
+const d = work.data;
+const { Content } = await render(work);
+const host = (u: string) => new URL(u).host;
+const hasBefore = !!d.before && !!d.sourceUrl;
+---
+
+<Base
+  title={`${d.title} — ${d.status === 'concept' ? 'концепт' : 'робота'} | YonkaAgency`}
+  description={d.summary.slice(0, 158)}
+  path={`/roboty/${work.id}/`}
+>
+  <article class="mx-auto max-w-[80rem] px-5 sm:px-8 pt-12 sm:pt-20">
+
+    <p class="notation">
+      <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/roboty/`} class="hover:text-ink">Роботи</a> · {d.niche}
+    </p>
+
+    <h1 class="mt-4 max-w-[20ch] text-[clamp(2.1rem,5.5vw,3.9rem)] font-semibold leading-[0.99] tracking-[-0.04em]">
+      {d.title}
+    </h1>
+
+    {/* Чесна мітка: помітна, але не в заголовку */}
+    {d.status === 'concept' && d.sourceUrl && (
+      <p class="mt-6 flex items-start gap-3 border-l-[3px] border-route pl-4 max-w-[58ch] text-[0.9375rem] leading-[1.6] text-ink-soft">
+        <span>
+          <span class="font-medium text-ink">Концепт.</span> Не замовлення клієнта —
+          редизайн наявного сайту <a href={d.sourceUrl} rel="nofollow noopener" class="underline decoration-route decoration-2 underline-offset-[4px] hover:text-route">{host(d.sourceUrl)}</a>,
+          зроблений, щоб показати підхід. Заміри чинного сайту справжні.
+        </span>
+      </p>
+    )}
+
+    {d.status === 'draft' && (
+      <p class="mt-6 flex items-start gap-3 border-l-[3px] border-route pl-4 max-w-[58ch] text-[0.9375rem] leading-[1.6] text-ink-soft">
+        <span>
+          <span class="font-medium text-ink">Чернетка для замовника.</span> Сайт
+          зроблений під реальну клініку, зданий на погодження й поки не запущений
+          на її домені. Показую як є — разом із тим, що в ньому лишилось виправити.
+        </span>
+      </p>
+    )}
+
+    <p class="mt-8 max-w-[58ch] text-[1.0625rem] sm:text-[1.125rem] leading-[1.55] text-ink-soft">{d.summary}</p>
+
+    {/* Було → стало, або сам результат */}
+    {hasBefore ? (
+      <div class="mt-14 grid gap-8 lg:grid-cols-2 lg:gap-10">
+        <figure>
+          <figcaption class="notation">Було · {host(d.sourceUrl!)}</figcaption>
+          <Image src={d.before!.desktop} alt={`Чинний сайт: ${d.niche}, десктоп`} widths={[480, 900]} sizes="(min-width: 64rem) 45vw, 92vw" class="mt-3 w-full border border-ink/15" loading="eager" />
+        </figure>
+        <figure>
+          <figcaption class="notation !text-route">Стало · концепт</figcaption>
+          <Image src={d.after.desktop} alt={`Концепт редизайну: ${d.niche}, десктоп`} widths={[480, 900]} sizes="(min-width: 64rem) 45vw, 92vw" class="mt-3 w-full border-2 border-route" loading="eager" />
+        </figure>
+      </div>
+    ) : (
+      <figure class="mt-14">
+        <figcaption class="notation !text-route">Головна сторінка</figcaption>
+        <Image src={d.after.desktop} alt={`${d.title}: головна сторінка на десктопі`} widths={[640, 1024, 1440]} sizes="(min-width: 80rem) 76rem, 92vw" class="mt-3 w-full border-2 border-route" loading="eager" />
+      </figure>
+    )}
+
+    {/* Заміри — головна зброя сторінки */}
+    <section class="mt-20 sm:mt-28">
+      <h2 class="text-[clamp(1.7rem,3.4vw,2.6rem)] font-semibold leading-[1.04] tracking-[-0.035em]">
+        Заміри
+      </h2>
+      <p class="mt-4 max-w-[52ch] text-[0.9375rem] text-ink-soft">
+        {hasBefore
+          ? 'Зняті з чинного сайту й з концепту однаковим способом: браузер, мобільний екран 390 px, ті самі перевірки.'
+          : 'Зняті з готової сторінки: PageSpeed Insights і браузер на мобільному екрані 390 px.'}
+      </p>
+
+      <dl class="mt-9 border-t border-ink/15">
+        {d.metrics.map((m) => (
+          <div class:list={['grid items-baseline gap-x-6 gap-y-1 border-b border-ink/15 py-4', m.before ? 'grid-cols-[minmax(0,1fr)_auto] sm:grid-cols-[minmax(0,1fr)_8rem_1.5rem_8rem]' : 'grid-cols-[minmax(0,1fr)_auto]']}>
+            <dt class="text-[1.0625rem]">{m.label}</dt>
+            {m.before && <dd class="notation !text-detour-ink sm:text-right">{m.before}</dd>}
+            {m.before && <dd class="hidden text-route sm:block sm:text-center" aria-hidden="true">→</dd>}
+            <dd class="text-[1.0625rem] font-semibold text-route sm:text-right">{m.after}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+
+    {/* Що не так */}
+    {d.problems.length > 0 && (
+    <section class="mt-20 sm:mt-28 -mx-5 sm:-mx-8 bg-route-deep px-5 py-16 text-paper sm:px-8 sm:py-20">
+      <div class="mx-auto max-w-[74rem]">
+        <h2 class="max-w-[20ch] text-[clamp(1.7rem,3.6vw,2.8rem)] font-semibold leading-[1.03] tracking-[-0.035em]">
+          {hasBefore ? 'Що не так із чинним сайтом' : 'Що ця сторінка мала вирішити'}
+        </h2>
+        <ol class="relative mt-12 pl-9">
+          <span class="absolute left-[8px] top-4 bottom-4 w-[2px] bg-route-pale/30" aria-hidden="true"></span>
+          {d.problems.map((p) => (
+            <li class="relative pb-9 last:pb-0">
+              <span class="absolute -left-9 top-[7px] h-[18px] w-[18px] rounded-full border-2 border-route-pale/60" aria-hidden="true"></span>
+              <h3 class="text-[1.1875rem] font-medium sm:text-[1.25rem]">{p.title}</h3>
+              <p class="mt-2 max-w-[54ch] leading-[1.55] text-route-pale">{p.detail}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+    )}
+
+    {/* Що змінив */}
+    <section class="mt-20 sm:mt-28">
+      <div class="grid gap-10 lg:grid-cols-[20rem_minmax(0,1fr)] lg:gap-24">
+        <div class="lg:sticky lg:top-10 lg:self-start">
+          <h2 class="text-[clamp(1.7rem,3.4vw,2.6rem)] font-semibold leading-[1.04] tracking-[-0.035em]">
+            {hasBefore ? 'Що змінив і чому' : 'Рішення й чому саме такі'}
+          </h2>
+        </div>
+        <ol class="relative pl-9">
+          <span class="absolute left-[7px] top-4 bottom-4 w-[3px] rounded-full bg-route/25" aria-hidden="true"></span>
+          {d.decisions.map((s) => (
+            <li class="relative py-4">
+              <span class="absolute -left-9 top-[22px] h-[17px] w-[17px] rounded-full border-[3px] border-route bg-paper" aria-hidden="true"></span>
+              <h3 class="text-[1.125rem] font-medium sm:text-[1.25rem]">{s.title}</h3>
+              <p class="mt-2 max-w-[54ch] text-[0.9375rem] leading-[1.6] text-ink-soft">{s.detail}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    {/* Мобільний */}
+    <section class="mt-20 sm:mt-28">
+      <h2 class="text-[clamp(1.7rem,3.4vw,2.6rem)] font-semibold leading-[1.04] tracking-[-0.035em]">
+        На телефоні
+      </h2>
+      <div class="mt-9 flex flex-wrap gap-8">
+        {hasBefore && (
+          <figure class="w-[calc(50%-1rem)] max-w-[15rem]">
+            <figcaption class="notation">Було</figcaption>
+            <Image src={d.before!.mobile} alt="Чинний сайт на мобільному" widths={[240, 480]} sizes="15rem" class="mt-3 w-full border border-ink/15" loading="lazy" />
+          </figure>
+        )}
+        <figure class="w-[calc(50%-1rem)] max-w-[15rem]">
+          <figcaption class="notation !text-route">{hasBefore ? 'Стало' : 'Головна'}</figcaption>
+          <Image src={d.after.mobile} alt={`${d.title}: головна сторінка на мобільному`} widths={[240, 480]} sizes="15rem" class="mt-3 w-full border-2 border-route" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    {/* Текст кейсу */}
+    <section class="mt-20 sm:mt-28 sm:max-w-[38rem] lg:ml-[20rem] lg:max-w-[40rem]">
+      <div class="[&>p]:mt-5 [&>p]:leading-[1.6] [&>p]:text-ink-soft">
+        <Content />
+      </div>
+    </section>
+
+    {/* Чесність: чого концепт не закриває */}
+    {d.tradeoffs.length > 0 && (
+      <section class="mt-16 sm:max-w-[38rem] lg:ml-[20rem] lg:max-w-[40rem]">
+        <h2 class="text-[1.25rem] font-medium">{hasBefore ? 'Чого концепт не закриває' : 'Що в цій роботі ще не зроблено'}</h2>
+        <ul class="mt-5 border-t border-ink/15">
+          {d.tradeoffs.map((t) => (
+            <li class="border-b border-ink/15 py-4 text-[0.9375rem] leading-[1.6] text-ink-soft">{t}</li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {/* Підпис виконавця */}
+    <section class="mt-16 sm:max-w-[38rem] lg:ml-[20rem] lg:max-w-[40rem]">
+      <div class="flex items-center gap-4 border-t border-ink/15 pt-6">
+        <div class="h-14 w-14 shrink-0 rounded-full border-[3px] border-route bg-paper-deep" role="img" aria-label="Фото Остапа Йонки — буде додано"></div>
+        <div>
+          <p class="text-[1.0625rem] font-medium">{hasBefore ? 'Концепт зробив' : 'Сайт зробив'} Остап Йонка</p>
+          <p class="notation mt-1">Львів · сам, від структури до запуску</p>
+        </div>
+      </div>
+      {d.resultUrl && (
+        <a href={d.resultUrl} rel="noopener" class="mt-6 inline-flex min-h-[46px] items-center text-[0.9375rem] font-medium underline decoration-route decoration-2 underline-offset-[6px] hover:text-route">
+          Відкрити концепт у новій вкладці
+        </a>
+      )}
+    </section>
+
+    {/* Дія */}
+    <section class="mt-20 sm:mt-28">
+      <div class="border-t-[3px] border-route pt-9 sm:max-w-[46rem]">
+        <h2 class="max-w-[22ch] text-[clamp(1.6rem,3.4vw,2.5rem)] font-semibold leading-[1.04] tracking-[-0.035em]">
+          Зробити такий розбір вашого сайту
+        </h2>
+        <p class="mt-5 max-w-[50ch] text-ink-soft">
+          Надішліть посилання — покажу заміри чинного сайту й що з ними не так.
+          Безкоштовно, без зобов'язань.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://t.me/YonkaAgency"
+             class="inline-flex min-h-[52px] items-center rounded-[3px] bg-route px-6 text-[1.0625rem] font-medium text-paper transition-colors hover:bg-route-bright">
+            Написати в Telegram
+          </a>
+          <a href="tel:+380962192952"
+             class="inline-flex min-h-[52px] items-center rounded-[3px] border border-ink/25 px-6 text-[1.0625rem] font-medium transition-colors hover:border-ink hover:bg-paper-deep">
+            +380 96 219 29 52
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+</Base>

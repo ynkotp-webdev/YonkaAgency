@@ -1,0 +1,133 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  lang?: 'uk' | 'ru';
+  path?: string;
+}
+const { title, description, lang = 'uk', path = '/' } = Astro.props;
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+const site = `https://ynkotp-webdev.github.io${b}`;
+const ukPath = lang === 'ru' ? path.replace(/^\/ru/, '') || '/' : path;
+// Поки збудована лише головна — навігація веде на її секції, а не на 404.
+const nav = lang === 'ru'
+  ? [['Почему $200', `${b}/#chomu`], ['Работы', `${b}/roboty/`], ['Цены', `${b}/#tsiny`], ['Обо мне', `${b}/#pro-mene`]]
+  : [['Чому $200', `${b}/#chomu`], ['Роботи', `${b}/roboty/`], ['Ціни', `${b}/#tsiny`], ['Про мене', `${b}/#pro-mene`]];
+const t = lang === 'ru'
+  ? { write: 'Написать в Telegram', call: 'Позвонить', skip: 'Перейти к содержимому', home: 'На главную' }
+  : { write: 'Написати в Telegram', call: 'Зателефонувати', skip: 'Перейти до вмісту', home: 'На головну' };
+---
+<!doctype html>
+<html lang={lang === 'ru' ? 'ru-UA' : 'uk-UA'}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={`${site}${path}`} />
+  <link rel="alternate" hreflang="uk" href={`${site}${ukPath}`} />
+  <link rel="alternate" hreflang="x-default" href={`${site}${ukPath}`} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content={lang === 'ru' ? 'ru_UA' : 'uk_UA'} />
+  <meta property="og:url" content={`${site}${path}`} />
+  <meta name="theme-color" content="#5b21b6" />
+  <link rel="preload" href={`${b}/fonts/geologica-0.woff2`} as="font" type="font/woff2" crossorigin />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'YonkaAgency',
+    description,
+    url: site,
+    telephone: '+380962192952',
+    founder: { '@type': 'Person', name: 'Остап Йонка' },
+    areaServed: { '@type': 'AdministrativeArea', name: 'Західна Україна' },
+    address: { '@type': 'PostalAddress', addressLocality: 'Львів', addressCountry: 'UA' },
+    priceRange: '$200–$300',
+    knowsLanguage: ['uk'],
+    sameAs: ['https://t.me/YonkaAgency'],
+  })} />
+</head>
+<body class="min-h-screen bg-paper text-ink antialiased">
+<!--
+  THESIS: Механізм цієї студії — відсутність передач між людьми, а це топологія;
+  тому сайт побудований як схема маршруту, що малює пропозицію замість декларувати її.
+  Відмовляється від категорійного heroFeaturesCTA зі скляними картками на темному градієнті.
+  OWN-WORLD: друкарський прохолодний папір #f6f6f4, чорнило #14121a, глибокий фіолетовий
+  #5b21b6 як лінія і як залиті поля; бліда сіра лінія #a9a4b8 — маршрут агенції.
+  Geologica для голосу, JetBrains Mono лише для замірів і нумерації станцій.
+  Вузли, лінії, легенда, виноски — жодних однакових карток.
+  STORY: відвідувач після холодного дзвінка розуміє, що працює одна людина, бачить сім
+  станцій до запуску, бачить ціну на самій лінії й пише в Telegram.
+  FIRST VIEWPORT: заголовок ліворуч угорі, під ним фіолетова лінія з семи вузлів через
+  усю ширину; праворуч від неї бліда схема агенції з шістьма пересадками; ціна і дія —
+  позначки на лінії, а не кнопка в картці.
+  FORM: схема маршруту, кандидат 6 з упорядкованого списку, seed 4aab6a65.
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-route focus:text-paper focus:px-4 focus:py-3 focus:rounded-[3px]">{t.skip}</a>
+
+  <header class="border-b border-ink/12">
+    <div class="mx-auto max-w-[80rem] px-5 sm:px-8">
+      <div class="flex items-center justify-between gap-6 py-4">
+        <a href={lang === 'ru' ? `${b}/ru/` : `${b}/`} class="group flex min-h-[46px] items-center gap-2" aria-label={t.home}>
+          <span class="text-[1.0625rem] font-semibold tracking-[-0.03em]">Yonka</span>
+          <span class="h-2 w-2 shrink-0 rounded-full bg-route" aria-hidden="true"></span>
+          <span class="text-[1.0625rem] font-light tracking-[-0.03em] text-ink-soft">Agency</span>
+        </a>
+
+        <nav aria-label={lang === 'ru' ? 'Основная навигация' : 'Основна навігація'} class="hidden md:block">
+          <ul class="flex items-center gap-7">
+            {nav.map(([label, href]) => (
+              <li>
+                <a href={href} class="inline-flex min-h-[46px] items-center text-[0.9375rem] text-ink-soft transition-colors hover:text-ink">{label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <a href="tel:+380962192952" class="inline-flex min-h-[46px] min-w-[46px] items-center justify-center rounded-[3px] px-3 text-[0.9375rem] text-ink-soft transition-colors hover:text-ink md:hidden" aria-label={t.call}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5C4 4.7 4.7 4 5.5 4h2.2c.7 0 1.3.5 1.5 1.2l.7 3c.1.6-.1 1.2-.6 1.5l-1.4 1a12 12 0 0 0 5.4 5.4l1-1.4c.3-.5.9-.7 1.5-.6l3 .7c.7.2 1.2.8 1.2 1.5v2.2c0 .8-.7 1.5-1.5 1.5A15.5 15.5 0 0 1 4 5.5Z"/></svg>
+          </a>
+          <a href="https://t.me/YonkaAgency" class="inline-flex min-h-[46px] items-center rounded-[3px] bg-route px-4 text-[0.9375rem] font-medium text-paper transition-colors hover:bg-route-bright">
+            Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <slot />
+  </main>
+
+  <footer class="mt-24 border-t border-ink/12 bg-paper-deep">
+    <div class="mx-auto max-w-[80rem] px-5 sm:px-8 py-12">
+      <div class="grid gap-10 sm:grid-cols-[1fr_auto]">
+        <div>
+          <p class="notation">{lang === 'ru' ? 'Конечная станция' : 'Кінцева станція'}</p>
+          <p class="mt-3 max-w-[38ch] text-[1.0625rem] text-ink-soft">
+            {lang === 'ru'
+              ? 'Остап Йонка. Делаю сайты полного цикла один: структура, дизайн, код, SEO-настройка. Львов, работаю по всей Западной Украине.'
+              : 'Остап Йонка. Роблю сайти повного циклу сам: структура, дизайн, код, SEO-налаштування. Львів, працюю по всій Західній Україні.'}
+          </p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <a href="tel:+380962192952" class="inline-flex min-h-[46px] items-center gap-3 text-[1.0625rem] font-medium hover:text-route">
+            <span class="h-2 w-2 rounded-full bg-route" aria-hidden="true"></span>+380 96 219 29 52
+          </a>
+          <a href="https://t.me/YonkaAgency" class="inline-flex min-h-[46px] items-center gap-3 text-[1.0625rem] font-medium hover:text-route">
+            <span class="h-2 w-2 rounded-full bg-route" aria-hidden="true"></span>@YonkaAgency
+          </a>
+          {/* Перемикач мов повернеться, коли буде зібрана версія /ru/ */}
+        </div>
+      </div>
+      <p class="notation mt-10">© {new Date().getFullYear()} YonkaAgency · Львів</p>
+    </div>
+  </footer>
+</body>
+</html>
