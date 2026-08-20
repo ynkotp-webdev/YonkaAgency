@@ -9,10 +9,11 @@ const roboty = defineCollection({
     z.object({
       title: z.string(),
       kind: z.enum(['Редизайн', 'Лендінг', 'Багатосторінковий сайт']),
-      // Чесна мітка. Поки немає зданих замовлень — тільки 'concept' або 'draft'.
+      // Чесна мітка. Поки немає зданих замовлень — тільки 'concept', 'draft' або 'demo'.
       // concept — редизайн чужого сайту з власної ініціативи (є sourceUrl і «було»).
       // draft   — сайт із нуля під реального замовника, ще не зданий (немає «було»).
-      status: z.enum(['concept', 'draft', 'client']).default('concept'),
+      // demo    — сайт вигаданого закладу: замовника не існує, це показ рівня.
+      status: z.enum(['concept', 'draft', 'demo', 'client']).default('concept'),
       niche: z.string(),
       // Тільки для редизайнів: адреса чинного сайту, з якого знято «було».
       sourceUrl: z.string().url().optional(),
@@ -22,6 +23,8 @@ const roboty = defineCollection({
       summary: z.string(),
       before: z.object({ desktop: image(), mobile: image() }).optional(),
       after: z.object({ desktop: image(), mobile: image() }),
+      // Знімки всієї сторінки для рамки з прокруткою. Немає — блок не показується.
+      scroll: z.object({ desktop: image(), mobile: image() }).optional(),
       // Заміри: те, що не можна згенерувати.
       // before відсутній — коли порівнювати нема з чим: показуємо одне значення.
       metrics: z.array(

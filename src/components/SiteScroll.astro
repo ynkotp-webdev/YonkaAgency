@@ -1,0 +1,140 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  desktop: ImageMetadata;
+  mobile: ImageMetadata;
+  title: string;
+  href?: string;
+  /** Підпис над рамкою: чий це сайт — чинний чи результат роботи */
+  label?: string;
+  id: string;
+}
+
+const { desktop, mobile, title, href, label = 'Живий скрол', id } = Astro.props;
+const name = `view-${id}`;
+---
+
+<figure class="viewer mt-6">
+  {/* Перемикач без жодного скрипта: два радіо й сусідні селектори */}
+  <input class="sw sw-d" type="radio" name={name} id={`${id}-d`} checked />
+  <input class="sw sw-m" type="radio" name={name} id={`${id}-m`} />
+
+  <figcaption class="bar">
+    <span class="notation !text-route">{label}</span>
+    <span class="tabs" role="group" aria-label="Ширина екрана">
+      <label class="tab tab-d" for={`${id}-d`}>Комп'ютер</label>
+      <label class="tab tab-m" for={`${id}-m`}>Телефон</label>
+    </span>
+  </figcaption>
+
+  <div class="pane pane-d">
+    <div class="glass glass-d" tabindex="0" role="group" aria-label={`${title}: сторінка на комп'ютері, прокручується`}>
+      <Image src={desktop} alt={`${title}: уся сторінка на комп'ютері`} widths={[720, 1100]} sizes="(min-width: 64rem) 60rem, 92vw" quality={58} class="sheet" loading="lazy" />
+    </div>
+  </div>
+
+  <div class="pane pane-m">
+    <div class="phone">
+      <div class="glass glass-m" tabindex="0" role="group" aria-label={`${title}: сторінка на телефоні, прокручується`}>
+        <Image src={mobile} alt={`${title}: уся сторінка на телефоні`} widths={[390]} sizes="19rem" quality={58} class="sheet" loading="lazy" />
+      </div>
+    </div>
+  </div>
+
+  <p class="hint notation">
+    Прокрутіть усередині рамки. Це знімок усієї сторінки, знятий у браузері{href && (
+      <> — <a href={href} rel="noopener" class="hint-link">відкрити сайт</a></>
+    )}.
+  </p>
+</figure>
+
+<style>
+  /* Радіо лишаються у потоці й доступні з клавіатури, але їх не видно */
+  .sw {
+    position: absolute;
+    width: 1px; height: 1px;
+    margin: -1px; padding: 0; border: 0;
+    clip-path: inset(50%);
+    overflow: hidden; white-space: nowrap;
+  }
+
+  .bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .tabs { display: flex; gap: 0; }
+
+  .tab {
+    display: inline-flex;
+    align-items: center;
+    min-height: 46px;
+    padding-inline: 0.9rem;
+    border: 1px solid color-mix(in srgb, var(--color-ink) 22%, transparent);
+    font-size: 0.9375rem;
+    color: var(--color-ink-soft);
+    cursor: pointer;
+    user-select: none;
+    background: var(--color-paper);
+  }
+  .tab-d { border-radius: var(--radius-plate) 0 0 var(--radius-plate); }
+  .tab-m { border-radius: 0 var(--radius-plate) var(--radius-plate) 0; margin-left: -1px; }
+  .tab:hover { color: var(--color-ink); }
+
+  .sw-d:checked ~ .bar .tab-d,
+  .sw-m:checked ~ .bar .tab-m {
+    background: var(--color-route);
+    border-color: var(--color-route);
+    color: var(--color-paper);
+  }
+
+  .sw-d:focus-visible ~ .bar .tab-d,
+  .sw-m:focus-visible ~ .bar .tab-m {
+    outline: 2px solid var(--color-route);
+    outline-offset: 3px;
+  }
+
+  .pane { display: none; }
+  .sw-d:checked ~ .pane-d,
+  .sw-m:checked ~ .pane-m { display: block; }
+
+  /* Вікно, всередині якого їде сторінка */
+  .glass {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--color-paper-deep);
+    border: 2px solid var(--color-route);
+    border-radius: var(--radius-plate);
+  }
+  .glass:focus-visible { outline: 2px solid var(--color-route); outline-offset: 3px; }
+  .glass-d { height: min(74vh, 40rem); }
+  .glass-m { height: min(70vh, 34rem); }
+
+  .sheet { display: block; width: 100%; height: auto; }
+
+  .phone { max-width: 19rem; }
+
+  /* У режимі телефона підпис і рамка стоять однією колонкою завширшки з апаратом,
+     інакше на широкому екрані перемикач тікає до правого краю від порожнечі.
+     Браузер без :has() просто лишає широкий рядок — нічого не ламається. */
+  @media (min-width: 40rem) {
+    .viewer:has(.sw-m:checked) .bar,
+    .viewer:has(.sw-m:checked) .hint { max-width: 19rem; }
+  }
+
+  .hint { padding-top: 0.75rem; }
+  .hint-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--color-route);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+  .hint-link:hover { color: var(--color-route); }
+</style>
