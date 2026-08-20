@@ -26,6 +26,7 @@ const t = lang === 'ru'
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <link rel="icon" href={`${b}/favicon.svg`} type="image/svg+xml" />
   <link rel="canonical" href={`${site}${path}`} />
   <link rel="alternate" hreflang="uk" href={`${site}${ukPath}`} />
   <link rel="alternate" hreflang="x-default" href={`${site}${ukPath}`} />
@@ -34,6 +35,10 @@ const t = lang === 'ru'
   <meta property="og:type" content="website" />
   <meta property="og:locale" content={lang === 'ru' ? 'ru_UA' : 'uk_UA'} />
   <meta property="og:url" content={`${site}${path}`} />
+  <meta property="og:image" content={`${site}${b}/og.png`} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#5b21b6" />
   <link rel="preload" href={`${b}/fonts/geologica-0.woff2`} as="font" type="font/woff2" crossorigin />
   <script type="application/ld+json" set:html={JSON.stringify({
