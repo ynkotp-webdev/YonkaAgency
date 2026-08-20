@@ -31,14 +31,15 @@ const name = `view-${id}`;
 
   <div class="pane pane-d">
     <div class="glass glass-d" tabindex="0" role="group" aria-label={`${title}: сторінка на комп'ютері, прокручується`}>
-      <Image src={desktop} alt={`${title}: уся сторінка на комп'ютері`} widths={[720, 1100]} sizes="(min-width: 64rem) 60rem, 92vw" quality={58} class="sheet" loading="lazy" />
+      <Image src={desktop} alt={`${title}: уся сторінка на комп'ютері`} widths={[720, 1100]} sizes="(min-width: 64rem) 60rem, 92vw" quality={82} class="sheet" loading="lazy" />
     </div>
   </div>
 
   <div class="pane pane-m">
     <div class="phone">
       <div class="glass glass-m" tabindex="0" role="group" aria-label={`${title}: сторінка на телефоні, прокручується`}>
-        <Image src={mobile} alt={`${title}: уся сторінка на телефоні`} widths={[390]} sizes="19rem" quality={58} class="sheet" loading="lazy" />
+        {/* jpeg, а не webp: знімок довгої сторінки вищий за межу webp у 16383 px */}
+        <Image src={mobile} alt={`${title}: уся сторінка на телефоні`} widths={[390]} sizes="19rem" format="jpeg" quality={80} class="sheet" loading="lazy" />
       </div>
     </div>
   </div>

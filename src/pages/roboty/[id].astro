@@ -78,15 +78,10 @@ const hasDelta = d.metrics.some((m) => !!m.before);
           <Image src={d.after.desktop} alt={`Концепт редизайну: ${d.niche}, десктоп`} widths={[480, 900]} sizes="(min-width: 64rem) 45vw, 92vw" class="mt-3 w-full border-2 border-route" loading="eager" />
         </figure>
       </div>
-    ) : d.scroll ? (
-      <div class="mt-14">
-        <SiteScroll id={work.id} title={d.title} href={d.resultUrl}
-          desktop={d.scroll.desktop} mobile={d.scroll.mobile} label="Сайт цілком" />
-      </div>
     ) : (
       <figure class="mt-14">
         <figcaption class="notation !text-route">Головна сторінка</figcaption>
-        <Image src={d.after.desktop} alt={`${d.title}: головна сторінка на десктопі`} widths={[640, 1024, 1440]} sizes="(min-width: 80rem) 76rem, 92vw" class="mt-3 w-full border-2 border-route" loading="eager" />
+        <Image src={d.after.desktop} alt={`${d.title}: головна сторінка на десктопі`} widths={[640, 1024, 1440]} sizes="(min-width: 80rem) 76rem, 92vw" quality={82} class="mt-3 w-full border-2 border-route" loading="eager" />
       </figure>
     )}
 
@@ -100,7 +95,7 @@ const hasDelta = d.metrics.some((m) => !!m.before);
           ? 'Зняті з чинного сайту й з концепту однаковим способом: браузер, мобільний екран 390 px, ті самі перевірки.'
           : hasDelta
             ? 'Зняті з тієї самої сторінки до і після виправлень: браузер, мобільний екран 390 px, ті самі перевірки. Рядки без пари — там, де порівнювати нема з чим.'
-            : 'Зняті з готової сторінки: браузер на мобільному екрані 390 px.'}
+            : 'Зняті з живої сторінки на екрані телефона. Не обіцянки — те, що можна перевірити самому.'}
       </p>
 
       <dl class="mt-9 border-t border-ink/15">
@@ -158,35 +153,14 @@ const hasDelta = d.metrics.some((m) => !!m.before);
     </section>
 
     {/* Уся сторінка, як вона є */}
-    {hasBefore && d.scroll && (
+    {d.scroll && (
       <section class="mt-20 sm:mt-28">
         <h2 class="text-[clamp(1.7rem,3.4vw,2.6rem)] font-semibold leading-[1.04] tracking-[-0.035em]">
           Як це виглядає цілком
         </h2>
         <SiteScroll id={work.id} title={d.title} href={d.resultUrl}
-          desktop={d.scroll.desktop} mobile={d.scroll.mobile} label="Результат" />
+          desktop={d.scroll.desktop} mobile={d.scroll.mobile} label={hasBefore ? 'Результат' : 'Сайт цілком'} />
       </section>
-    )}
-
-    {/* Мобільний: тільки як порівняння. Без «до» його показує рамка вище. */}
-    {(hasBefore || !d.scroll) && (
-    <section class="mt-20 sm:mt-28">
-      <h2 class="text-[clamp(1.7rem,3.4vw,2.6rem)] font-semibold leading-[1.04] tracking-[-0.035em]">
-        На телефоні
-      </h2>
-      <div class="mt-9 flex flex-wrap gap-8">
-        {hasBefore && (
-          <figure class="w-[calc(50%-1rem)] max-w-[15rem]">
-            <figcaption class="notation">Було</figcaption>
-            <Image src={d.before!.mobile} alt="Чинний сайт на мобільному" widths={[240, 480]} sizes="15rem" class="mt-3 w-full border border-ink/15" loading="lazy" />
-          </figure>
-        )}
-        <figure class="w-[calc(50%-1rem)] max-w-[15rem]">
-          <figcaption class="notation !text-route">{hasBefore ? 'Стало' : 'Головна'}</figcaption>
-          <Image src={d.after.mobile} alt={`${d.title}: головна сторінка на мобільному`} widths={[240, 480]} sizes="15rem" class="mt-3 w-full border-2 border-route" loading="lazy" />
-        </figure>
-      </div>
-    </section>
     )}
 
     {/* Текст кейсу */}
