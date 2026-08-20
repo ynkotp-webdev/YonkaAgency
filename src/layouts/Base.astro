@@ -9,7 +9,7 @@ interface Props {
 }
 const { title, description, lang = 'uk', path = '/' } = Astro.props;
 const b = import.meta.env.BASE_URL.replace(/\/$/, '');
-const site = `https://ynkotp-webdev.github.io${b}`;
+const site = import.meta.env.SITE;
 const ukPath = lang === 'ru' ? path.replace(/^\/ru/, '') || '/' : path;
 // Поки збудована лише головна — навігація веде на її секції, а не на 404.
 const nav = lang === 'ru'
