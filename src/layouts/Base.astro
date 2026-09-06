@@ -13,8 +13,8 @@ const site = import.meta.env.SITE;
 const ukPath = lang === 'ru' ? path.replace(/^\/ru/, '') || '/' : path;
 // Поки збудована лише головна — навігація веде на її секції, а не на 404.
 const nav = lang === 'ru'
-  ? [['Почему $200', `${b}/#chomu`], ['Работы', `${b}/roboty/`], ['Цены', `${b}/#tsiny`], ['Обо мне', `${b}/#pro-mene`]]
-  : [['Чому $200', `${b}/#chomu`], ['Роботи', `${b}/roboty/`], ['Ціни', `${b}/#tsiny`], ['Про мене', `${b}/#pro-mene`]];
+  ? [['Почему $300', `${b}/#chomu`], ['Работы', `${b}/roboty/`], ['Цены', `${b}/#tsiny`], ['Обо мне', `${b}/#pro-mene`]]
+  : [['Чому $300', `${b}/#chomu`], ['Роботи', `${b}/roboty/`], ['Ціни', `${b}/#tsiny`], ['Про мене', `${b}/#pro-mene`]];
 const t = lang === 'ru'
   ? { write: 'Написать в Telegram', call: 'Позвонить', skip: 'Перейти к содержимому', home: 'На главную' }
   : { write: 'Написати в Telegram', call: 'Зателефонувати', skip: 'Перейти до вмісту', home: 'На головну' };
@@ -51,7 +51,7 @@ const t = lang === 'ru'
     founder: { '@type': 'Person', name: 'Остап Йонка' },
     areaServed: { '@type': 'AdministrativeArea', name: 'Західна Україна' },
     address: { '@type': 'PostalAddress', addressLocality: 'Львів', addressCountry: 'UA' },
-    priceRange: '$200–$300',
+    priceRange: '$300–$500',
     knowsLanguage: ['uk'],
     sameAs: ['https://t.me/YonkaAgency'],
   })} />

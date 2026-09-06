@@ -185,7 +185,7 @@ const hasDelta = d.metrics.some((m) => !!m.before);
     {/* Підпис виконавця */}
     <section class="mt-16 sm:max-w-[38rem] lg:ml-[20rem] lg:max-w-[40rem]">
       <div class="flex items-center gap-4 border-t border-ink/15 pt-6">
-        <div class="h-14 w-14 shrink-0 rounded-full border-[3px] border-route bg-paper-deep" role="img" aria-label="Фото Остапа Йонки — буде додано"></div>
+        <div class="h-14 w-14 shrink-0 rounded-full border-[3px] border-route bg-paper-deep overflow-hidden" role="img" aria-label="Фото Остапа Йонки — буде додано"><svg viewBox="0 0 64 64" class="h-full w-full fill-ink/25" aria-hidden="true"><circle cx="32" cy="24" r="13"/><path d="M32 41c-12 0-21 8-21 18v9h42v-9c0-10-9-18-21-18Z"/></svg></div>
         <div>
           <p class="text-[1.0625rem] font-medium">{hasBefore ? 'Концепт зробив' : 'Сайт зробив'} Остап Йонка</p>
           <p class="notation mt-1">Львів · сам, від структури до запуску</p>
